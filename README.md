@@ -19,12 +19,12 @@ A full-stack react application that allows users to post date ideas and location
 
 ## Authors
 
-![project author](https://img.shields.io/badge/author-Connerjm-blueviolet)
-![project author](https://img.shields.io/badge/author-CorbinGar-blueviolet)
-![project author](https://img.shields.io/badge/author-dorley1993-blueviolet)
-![project author](https://img.shields.io/badge/author-FAC-73-blueviolet)
-![project author](https://img.shields.io/badge/author-msr102087-blueviolet)
-![project author](https://img.shields.io/badge/author-rikioh-blueviolet)
+[![project author](https://img.shields.io/badge/Author-Conner-blueviolet)](https://github.com/connerjm)
+[![project author](https://img.shields.io/badge/Author-Corbin-blueviolet)](https://github.com/Corbingar)
+[![project author](https://img.shields.io/badge/Author-Danielle-blueviolet)](https://github.com/dorley1993)
+[![project author](https://img.shields.io/badge/Author-Kay-blueviolet)](https://github.com/FAC-73)
+[![project author](https://img.shields.io/badge/Author-Megan-blueviolet)](https://github.com/msr102087)
+[![project author](https://img.shields.io/badge/Author-Rikio-blueviolet)](https://github.com/rikioh)
 
 ## Features
 
