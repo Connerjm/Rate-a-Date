@@ -36,7 +36,7 @@ A full-stack react application that allows users to post date ideas and location
 
 ## Deployement
 
-- [Live on Heroku](#/)
+- [Live on Heroku](https://rate--a--date.herokuapp.com/)
 - [GitHub Repo](https://github.com/Connerjm/Rate-a-Date)
 
 ## License
