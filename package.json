@@ -1,0 +1,26 @@
+{
+    "name": "rate-a-date",
+    "version": "1.0.0",
+    "description": "A full-stack react application that allows users to post date ideas and locations, as well as rating and commenting.",
+    "main": "server.js",
+    "scripts": {
+        "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+        "start:prod": "node server.js",
+        "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+        "client": "cd client && npm run start",
+        "seed": "node scripts/seedDB.js",
+        "install": "cd client && npm install",
+        "build": "cd client && npm run build",
+        "heroku-postbuild": "npm run build"
+    },
+    "author": "Group 3",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^4.1.0",
+        "nodemon": "^1.18.7"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "if-env": "^1.0.4"
+    }
+}
