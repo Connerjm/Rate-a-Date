@@ -1,0 +1,12 @@
+footer {
+
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    padding-left: 15%;
+}
+a {
+    color: white;
+}
