@@ -7,11 +7,11 @@ export default function Comment(props)
         <div>
             <div>
                 <h1>{props.title}</h1>
-                <Stars />
+                <Stars currentRating={props.currentRating}/>
             </div>
             <p>{props.comment}</p>
             <div>
-                <img />
+                <img href={props.userthumbnail} alt="The users profile icon."/>
                 <p>{props.username}</p>
                 <p>{props.date}</p>
             </div>

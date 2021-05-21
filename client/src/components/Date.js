@@ -10,7 +10,7 @@ export default function Date(props)
             <div>
                 <div>
                     <h1>{props.title}</h1>
-                    <Stars />{/* TODO */}
+                    <Stars currentRating={props.currentRating}/>
                 </div>
                 <div>
                     <p>Submitted by</p>
@@ -18,10 +18,10 @@ export default function Date(props)
                     <img />
                 </div>
             </div>
-            <h2>Details</h2>
+            <h2>Description</h2>
             <p>{props.description}</p>
-            {props.address !== null ? props.address : <></>}
-            <Comments comments={props.comments} /> {/* TODO */}
+            <p>{props.location}</p>
+            <Comments comments={props.comments} />
         </div>
     );
 }

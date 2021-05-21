@@ -5,20 +5,20 @@ export default function DateListItem(props)
 {
     return (
         <div>
-            <img />
+            <img href={props.image} alt="A depiction of the specified date."/>
             <div>
                 {/* Top part with title and meta info. */}
                 <div>
                     <h1>{props.title}</h1>
                     {/* Optional location. */}
-                    {props.location !== null ? <p>{props.location}</p> : <></>}
+                    {<p>{props.location}</p>}
                     {/* Always exactly one category. */}
                     <p>{props.category}</p>
-                    {/* >= 0 tags. */}
-                    {props.tags.map(tag =>
-                    {
-                        <p>{tag}</p>;
-                    })}
+                    {/* 0 or more tags. */}
+                    {props.tags ? <ul>
+                        {props.tags.map(tag =>
+                            <li>{tag}</li>)}
+                    </ul> : <></>}
                 </div>
                 {/* Middle part with just the description. */}
                 <p>{props.description}</p>
@@ -32,7 +32,7 @@ export default function DateListItem(props)
                             Delete
                         </button>
                     </div>
-                    <Stars />{/* Rating. TODO */}
+                    <Stars currentRating={props.currentRating}/>
                 </div>
             </div>
         </div>
