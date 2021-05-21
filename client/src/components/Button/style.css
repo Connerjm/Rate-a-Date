@@ -1,0 +1,61 @@
+:root {
+    --default: #9416FB;
+    --light: #fff;
+    --danger: #E6016F;
+    --border-radius-md: 6px;
+    --border-radius-lg: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
+    --height-md: 30px;
+    --height-lg: 60px;
+    --text-medium: 500;
+}
+
+.medium {
+    height: var(--height-md);
+    width: fit-content;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    line-height: var(--height-md);
+    font-family: 'Roboto', sans-serif;
+}
+
+.large {
+    height: var(--border-radius-lg);
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: var(--border-radius-lg);
+    font-family: 'Roboto', sans-serif;
+}
+
+.filled-default {
+    color: var(--light);
+    background-color: var(--default);
+}
+
+.outline-default {
+    color: var(--default);
+    border: var(--default) solid 1px;
+}
+
+.filled-danger {
+    color: var(--light);
+    background-color: var(--danger);
+}
+
+.outline-danger {
+    color: var(--danger);
+    border: var(--danger) solid 1px;
+}
+
+.filled-default :hover {
+    cursor: pointer;
+}
+
+    
