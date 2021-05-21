@@ -1,5 +1,321 @@
+:root {
+    /* Colors */
+    --gradient-pink:#E6016F;
+    --gradient-orange: #FF7608;
+    --default:#9416FB;
+    --default-hover:#4b0b80;
+    --danger:#E6016F;
+    --danger-hover:#B20257;
+    --default-background:#fff;
+    --secondary-background: #F5F5F5;
+    --default-foreground: #242424;
+    --secondary-foreground: #424242;
+    --tertiary-forergound: #616161;
+    --border: #E0E0E0;
+
+    /* Text */
+    --hero-header: 40px;
+    --section-header: 24px;
+    --body: 16px;
+    --body-emphasis: 20px;
+    --caption: 14px;
+    --default-weight: 500;
+    --hero-weight: 700;
+
+    /* borders */
+    --thin: 1px;
+    --thick: 2px;
+
+    /* border radius */
+    --border-radius-sm: 3px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 12px;
+
+    /* spacing */
+}
+
+* {
+    font-family: Roboto;
+}
+
+html {
+    background-color: var(--gradient-orange);
+}
+
+/* ------------------------------------------------------------------ */
+/* Body
+/* ------------------------------------------------------------------ */
+
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+    background-image: linear-gradient(#E6016F, #FF7608);
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: var(--default-background);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.116);
+    padding: 8px 32px 32px 32px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* ------------------------------------------------------------------ */
+/* Text styles
+/* ------------------------------------------------------------------ */
+
+
+h1 {
+    color: var(--default-foreground);
+    font-family: Roboto;
+    font-size: var(--hero-header);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 47px;
+    text-align: left;
+}
+
+h2 {
+    color: var(--default-foreground);
+    font-family: Roboto;
+    font-size: var(--section-header);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 47px;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header
+/* ------------------------------------------------------------------ */
+
+
+header {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 140px;
+}
+
+.header-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+@media only screen and (max-width: 560px) {
+    .header-layout {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.account-link-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.account-link {
+    color: var(--default-background);
+    font-size: 20px;
+    line-height: auto;
+    padding-top: 0%;
+    font-family: Roboto;
+    font-weight: 400;
+    top: 20px;
+}
+
+.account-link:hover {
+    text-decoration: underline;
+    color: var(--default-background);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* Cards
+/* ------------------------------------------------------------------ */
+
+.card {
+    height: 160px;
+    width: 260px;
+    background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
+    background-size: cover;
+    background-repeat: none;
+    border-radius: 12px;
+    transition: transform .2s;
+}
+
+@media only screen and (max-width: 560px) {
+    .card {
+        height: 100%;
+        width: auto;
+        background-size: 100% auto;
+    }
+}
+
+.protection-layer {
+    background-color: rgba(0, 0, 0, 0.205);
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 128px;
+}
+
+@media only screen and (max-width: 560px) {
+    p {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:active {
+    transform: scale(0.95);
+  }
+
+p:hover {
+    color: #16FBD2;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons
+/* ------------------------------------------------------------------ */
+
+.medium {
+    height: var(--height-md);
+    width: fit-content;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: none;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.large {
+    height: var(--height-lg);
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: var(--border-radius-lg);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.round {
+    height: 60px;
+    width: 60px;
+    background-color: var(--light);
+    color: var(--danger);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.116);
+    transition: transform .2s;
+    border: none;
+}
+
+.filled-default {
+    color: var(--light);
+    background-color: var(--default);
+}
+
+.filled-danger {
+    color: var(--light);
+    background-color: var(--danger);
+}
+
+.outline-default {
+    color: var(--default);
+    border-color: var(--default);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.outline-danger {
+    color: var(--danger);
+    border-color: var(--danger);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.thin {
+    border: 1px solid;
+}
+
+.thick {
+    border: 2px solid;
+}
+
+.filled-danger:hover {
+    background-color: var(--danger-hover);
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.filled-default:hover {
+    background-color: var(--default-hover);
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.outline-danger:hover {
+    border-color: var(--danger-hover);
+    color: var(--danger-hover);
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.outline-default:hover {
+    border-color: var(--default-hover);
+    color: var(--default-hover);
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.round:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.round:active {
+    transform: scale(0.95);
 }

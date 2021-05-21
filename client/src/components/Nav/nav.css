@@ -1,0 +1,15 @@
+#login,
+#signup {
+    padding-right: 10px;
+}
+#pages {
+    padding-right: 20px;
+}
+header {
+    margin: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    z-index: 1;
+}
