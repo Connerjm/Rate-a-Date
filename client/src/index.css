@@ -8,6 +8,7 @@
     --danger-hover:#B20257;
     --default-background:#fff;
     --secondary-background: #F5F5F5;
+    --tertiary-background: #BDBDBD;
     --default-foreground: #242424;
     --secondary-foreground: #424242;
     --tertiary-forergound: #616161;
@@ -27,15 +28,23 @@
     --thick: 2px;
 
     /* border radius */
-    --border-radius-sm: 3px;
+    --border-radius-sm: 4px;
     --border-radius-md: 6px;
     --border-radius-lg: 12px;
 
     /* spacing */
+    --spacing-xx-sml: 4px;
+    --spacing-x-sml: 8px;
+    --spacing-sml: 12px;
+    --spacing-med: 16px;
+    --spacing-lrg: 20px;
+    --spacing-x-lrg: 24px;
+    --spacing-xx-lrg: 28px;  
+    --spacing-xxx-lrg: 32px;
 }
 
 * {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -72,7 +81,6 @@ body {
 
 h1 {
     color: var(--default-foreground);
-    font-family: Roboto;
     font-size: var(--hero-header);
     font-style: normal;
     font-weight: var(--hero-weight);
@@ -82,11 +90,19 @@ h1 {
 
 h2 {
     color: var(--default-foreground);
-    font-family: Roboto;
     font-size: var(--section-header);
     font-style: normal;
     font-weight: var(--hero-weight);
     line-height: 47px;
+    text-align: left;
+}
+
+h3 {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 22px;
     text-align: left;
 }
 
@@ -138,7 +154,7 @@ header {
 }
 
 /* ------------------------------------------------------------------ */
-/* Cards
+/* Cards/categories
 /* ------------------------------------------------------------------ */
 
 .card {
@@ -167,7 +183,6 @@ header {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 14px;
     padding-left: 20px;
@@ -214,7 +229,6 @@ p:hover {
     border: none;
     font-size: 14px;
     line-height: 100%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .large {
@@ -227,7 +241,6 @@ p:hover {
     cursor: pointer;
     font-size: 20px;
     line-height: 100%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .round {
@@ -318,4 +331,161 @@ p:hover {
 
 .round:active {
     transform: scale(0.95);
+}
+
+/* ------------------------------------------------------------------ */
+/* Date Details Page
+/* ------------------------------------------------------------------ */
+
+.body-text {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--default-weight);
+    line-height: 150%;
+    text-align: left;
+}
+
+.sub-titles {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 150%;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Avatar
+/* ------------------------------------------------------------------ */
+
+.avatar-sml {
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.avatar-lrg{
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+    object-fit: cover;
+}
+
+.name-text {
+    color: var(--default);
+    font-size: var(--body);
+    font-weight: var(--hero-weight);
+    margin-bottom: var(--spacing-xx-sml);
+}
+
+.name-text-sub {
+    color: var(--secondary-foreground);
+    font-size: var(--caption);
+    font-weight: var(--default-weight);
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Map
+/* ------------------------------------------------------------------ */
+
+.map-container {
+    border: 4px solid white;
+    border-radius: var(--border-radius-lg);
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.16));
+    height: 320px;
+    width: 594px;
+}
+
+@media only screen and (max-width: 560px) {
+    .map-container {
+        height: 160px;
+        width: 280px;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* Ratings styles
+/* ------------------------------------------------------------------ */
+
+.star:active {
+    background-color: var(--gradient-orange);
+}
+
+.star:active:hover {
+    border: 2px solid #BDBDBD;
+    background-color: var(--gradient-orange);
+    cursor: pointer;
+}
+
+.star {
+    border: 2px solid #BDBDBD;
+    background-color: transparent;
+}
+
+.star:hover {
+    background-color: var(--gradient-orange);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tags
+/* ------------------------------------------------------------------ */
+
+.tag {
+    background-color: var(--default-background);
+    border: 1px solid #E0E0E0;
+    padding: 6px 8px 6px 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.tag-text {
+    color: var(--default-foreground);
+    font-size: var(--caption);
+    font-weight: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Input [hero]
+/* ------------------------------------------------------------------ */
+
+.input-container {
+    background-color: var(--default-background);
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 760px;
+    min-width: 260px;
+}
+
+.input {
+    background-color: transparent;
+    color: var(--tertiary-forergound);
+    font-size: var(--body-emphasis);
+    font-weight: var(--default-weight);
+    text-align: left;
+    width: inherit;
+}
+
+.input:hover {
+    cursor: text;
+    color: var(--default-foreground);
+}
+
+.input:focus-within {
+    cursor: text;
+    color: var(--default-foreground);
 }
