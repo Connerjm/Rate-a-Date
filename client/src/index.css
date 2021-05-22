@@ -8,6 +8,7 @@
     --danger-hover:#B20257;
     --default-background:#fff;
     --secondary-background: #F5F5F5;
+    --tertiary-background: #BDBDBD;
     --default-foreground: #242424;
     --secondary-foreground: #424242;
     --tertiary-forergound: #616161;
@@ -27,19 +28,41 @@
     --thick: 2px;
 
     /* border radius */
-    --border-radius-sm: 3px;
+    --border-radius-sm: 4px;
     --border-radius-md: 6px;
     --border-radius-lg: 12px;
 
     /* spacing */
+    --spacing-xx-sml: 4px;
+    --spacing-x-sml: 8px;
+    --spacing-sml: 12px;
+    --spacing-med: 16px;
+    --spacing-lrg: 20px;
+    --spacing-x-lrg: 24px;
+    --spacing-xx-lrg: 28px;  
+    --spacing-xxx-lrg: 32px;
 }
 
 * {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
-    background-color: var(--gradient-orange);
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
 }
 
 /* ------------------------------------------------------------------ */
@@ -47,24 +70,78 @@ html {
 /* ------------------------------------------------------------------ */
 
 
-body {
-    background-image: linear-gradient(#E6016F, #FF7608);
+.bg {
+    background-image: linear-gradient(-45deg, #E6016F, #FF7608);
+	animation: gradient 15s ease infinite;
+    -moz-animation: gradient 15s ease infinite ;
+    -webkit-animation: gradient 15s ease infinite ;
+    -o-animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    width: 100vmax;
+    height: 100vmax;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 0px;
-    padding: 0px;
-    height: 100vh;
-    width: 100vw;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .container {
-    /*background-color: var(--default-background);
+    background-color: var(--default-background);
     border-radius: 20px;
     box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.116);
-    padding: 8px 32px 32px 32px;*/
-    /*margin-left: 10%;
-    margin-right: 10%;*/
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: fit-content;
+    padding-bottom: 32px;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding: 0px 32px 0px 32px;
+}
+
+.p-1 {
+    padding: 2px!important;
+}
+
+.p-2 {
+    padding: 4px!important;
+}
+
+.p-3 {
+    padding: 6px!important;
+}
+
+.p-4 {
+    padding: 8px!important;
+}
+
+.p-5 {
+    padding: 10px!important;
+}
 /* ------------------------------------------------------------------ */
 /* Text styles
 /* ------------------------------------------------------------------ */
@@ -72,7 +149,6 @@ body {
 
 h1 {
     color: var(--default-foreground);
-    font-family: Roboto;
     font-size: var(--hero-header);
     font-style: normal;
     font-weight: var(--hero-weight);
@@ -82,11 +158,19 @@ h1 {
 
 h2 {
     color: var(--default-foreground);
-    font-family: Roboto;
     font-size: var(--section-header);
     font-style: normal;
     font-weight: var(--hero-weight);
     line-height: 47px;
+    text-align: left;
+}
+
+h3 {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 22px;
     text-align: left;
 }
 
@@ -138,17 +222,18 @@ header {
 }
 
 /* ------------------------------------------------------------------ */
-/* Cards
+/* Cards/categories
 /* ------------------------------------------------------------------ */
 
 .card {
     height: 160px;
-    width: 260px;
-    /*background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);*/
+    width: 240px;
+    background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
     background-size: cover;
     background-repeat: none;
     border-radius: 12px;
     transition: transform .2s;
+    border: none;
 }
 
 @media only screen and (max-width: 560px) {
@@ -166,19 +251,18 @@ header {
     border-radius: 12px;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
+.card-text {
     color: white;
     font-size: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 128px;
+    padding-top: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.623);
 }
 
 @media only screen and (max-width: 560px) {
-    p {
+    .card-text {
         padding-bottom: 20px;
         font-size: 20px;
+        color: white;
     }
 }
 
@@ -187,6 +271,8 @@ p {
     z-index: 1;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    text-decoration: none;
 }
 
 .card:active {
@@ -199,6 +285,8 @@ p:hover {
     -moz-transition: color 0.2s ease-out;
     -o-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
+    color: white;
+    text-decoration: none;
 }
 
 /* ------------------------------------------------------------------ */
@@ -214,7 +302,6 @@ p:hover {
     border: none;
     font-size: 14px;
     line-height: 100%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .large {
@@ -227,7 +314,6 @@ p:hover {
     cursor: pointer;
     font-size: 20px;
     line-height: 100%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .round {
@@ -239,6 +325,8 @@ p:hover {
     box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.116);
     transition: transform .2s;
     border: none;
+    font-size: 32px;
+    line-height: 60px;
 }
 
 .filled-default {
@@ -319,3 +407,161 @@ p:hover {
 .round:active {
     transform: scale(0.95);
 }
+
+/* ------------------------------------------------------------------ */
+/* Date Details Page
+/* ------------------------------------------------------------------ */
+
+.body-text {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--default-weight);
+    line-height: 150%;
+    text-align: left;
+}
+
+.sub-titles {
+    color: var(--default-foreground);
+    font-size: var(--body-emphasis);
+    font-style: normal;
+    font-weight: var(--hero-weight);
+    line-height: 150%;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Avatar
+/* ------------------------------------------------------------------ */
+
+.avatar-sml {
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.avatar-lrg{
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+    object-fit: cover;
+}
+
+.name-text {
+    color: var(--default);
+    font-size: var(--body);
+    font-weight: var(--hero-weight);
+    margin-bottom: var(--spacing-xx-sml);
+}
+
+.name-text-sub {
+    color: var(--secondary-foreground);
+    font-size: var(--caption);
+    font-weight: var(--default-weight);
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+/* Map
+/* ------------------------------------------------------------------ */
+
+.map-container {
+    border: 4px solid white;
+    border-radius: var(--border-radius-lg);
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.16));
+    height: 320px;
+    width: 594px;
+}
+
+@media only screen and (max-width: 560px) {
+    .map-container {
+        height: 160px;
+        width: 280px;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* Ratings styles
+/* ------------------------------------------------------------------ */
+
+.star:active {
+    background-color: var(--gradient-orange);
+}
+
+.star:active:hover {
+    border: 2px solid #BDBDBD;
+    background-color: var(--gradient-orange);
+    cursor: pointer;
+}
+
+.star {
+    border: 2px solid #BDBDBD;
+    background-color: transparent;
+}
+
+.star:hover {
+    background-color: var(--gradient-orange);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tags
+/* ------------------------------------------------------------------ */
+
+.tag {
+    background-color: var(--default-background);
+    border: 1px solid #E0E0E0;
+    padding: 6px 8px 6px 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.tag-text {
+    color: var(--default-foreground);
+    font-size: var(--caption);
+    font-weight: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Input [hero]
+/* ------------------------------------------------------------------ */
+
+.input-container {
+    background-color: var(--default-background);
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 760px;
+    min-width: 260px;
+}
+
+.input {
+    background-color: transparent;
+    color: var(--tertiary-forergound);
+    font-size: var(--body-emphasis);
+    font-weight: var(--default-weight);
+    text-align: left;
+    width: inherit;
+}
+
+.input:hover {
+    cursor: text;
+    color: var(--default-foreground);
+}
+
+.input:focus-within {
+    cursor: text;
+    color: var(--default-foreground);
+}
+

@@ -1,23 +1,17 @@
 #mainCard {
-    position: absolute;
-    width: 1199px;
-    height: 1800px;
-    left: 124px;
-    top: 136px;
+    
+    width: 80%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
 }
 #mainCard > div.container {
-    position: absolute;
-    width: 1200px;
-    height: 1099px;
-    top: 465px;
-}
-.tLocations {
-    padding: 5%;
+    width: auto;
+    height: fit-content;
 }
 span {
     color: var(--default-foreground);
-    font-family: Roboto;
     font-size: var(--section-header);
     font-style: small;
     font-weight: var(--hero-weight);
@@ -38,6 +32,6 @@ span {
 #mainCard > div:nth-child(3) {
     top: 750px;
 }
-.byCategory {
-    padding: 5%;
+.section-header-spacing {
+    padding: 20px 0px 20px 0px;
 }
