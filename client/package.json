@@ -4,6 +4,8 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "effect": "^1.0.4",
+    "jotai": "^0.15.3",
     "axios": "^0.18.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
