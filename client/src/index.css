@@ -57,12 +57,12 @@ body {
 }
 
 .container {
-    background-color: var(--default-background);
+    /*background-color: var(--default-background);
     border-radius: 20px;
     box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.116);
-    padding: 8px 32px 32px 32px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 8px 32px 32px 32px;*/
+    /*margin-left: 10%;
+    margin-right: 10%;*/
 }
 
 /* ------------------------------------------------------------------ */
@@ -144,7 +144,7 @@ header {
 .card {
     height: 160px;
     width: 260px;
-    background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
+    /*background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);*/
     background-size: cover;
     background-repeat: none;
     border-radius: 12px;
