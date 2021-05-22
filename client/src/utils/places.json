@@ -1,0 +1,35 @@
+[
+    {
+        "id": 8,
+        "name": "Philadephia"
+    },
+    {
+        "id": 7,
+        "name": "New York"
+    },
+    {
+        "id": 6,
+        "name": "Miami"
+    },
+    {
+        "id": 5,
+        "name": "Austin"
+    },
+    {
+        "id": 4,
+        "name": "Portland"
+    },
+    {
+        "id": 3,
+        "name": "San Fransisco"
+    },
+    {
+        "id": 2,
+        "name": "Los Angeles"
+    },
+    {
+        "id": 1,
+        "name": "Seattle"
+    }
+
+]

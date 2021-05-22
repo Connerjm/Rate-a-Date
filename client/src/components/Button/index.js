@@ -1,10 +1,14 @@
 import React from "react";
 import "./style.css";
 
-function Button() {
+function Button(props) {
     return (
-    <div className="medium filled-default">
-    <div className="content">Click me</div>
+    <div className="medium filled-default cstBtn">
+        <a href={props.link}>
+            <div className="content">
+                {props.btnText}
+            </div>
+        </a>
     </div>
     );
 }
