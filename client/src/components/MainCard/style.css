@@ -1,0 +1,43 @@
+#mainCard {
+    position: absolute;
+    width: 1199px;
+    height: 1800px;
+    left: 124px;
+    top: 136px;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+}
+#mainCard > div.container {
+    position: absolute;
+    width: 1200px;
+    height: 1099px;
+    top: 465px;
+}
+.tLocations {
+    padding: 5%;
+}
+span {
+    color: var(--default-foreground);
+    font-family: Roboto;
+    font-size: var(--section-header);
+    font-style: small;
+    font-weight: var(--hero-weight);
+    line-height: 47px;
+    text-align: left;
+}
+.fas {
+    font-size: large;
+}
+.locBtn {
+    background-color: #9416FB;
+    color: white;
+}
+#mainCard > div.container > div > div > div.row {
+    justify-content: center;
+}
+
+#mainCard > div:nth-child(3) {
+    top: 750px;
+}
+.byCategory {
+    padding: 5%;
+}
