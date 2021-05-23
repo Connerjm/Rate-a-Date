@@ -23,14 +23,14 @@
 }
 
 .large {
-    height: var(--border-radius-lg);
+    height: var(--height-lg);
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: var(--border-radius-lg);
     cursor: pointer;
     font-size: 14px;
-    line-height: var(--border-radius-lg);
+    line-height: var(--height-lg);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -56,6 +56,8 @@
 
 .filled-default :hover {
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
     

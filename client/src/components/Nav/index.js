@@ -6,17 +6,12 @@ function NavBar() {
 
     return (
         <header className="header">
-            {/*<button className="home"></button>*/}
-            <div className="row">
-                <div className="col-md-4"></div>
-                <div className="col-md-4">
-                    <img src="./spark.png" alt="logo" />
-                </div>
-                <div className="col-md-4 flex-row" id="pages">
+                  <div> <button className="round hidden"><i class="fas fa-home"></i></button></div>
+                    <img className="logo" src="https://raw.githubusercontent.com/FAC-73/zen-garden/c97a876ba046f32aab6e563ee158e349f3336006/spark_logo.svg" alt="logo" />
+                <div id="pages">
                     <a href="/SignupSignin" id="login">Login</a>
                     <a href="/SignupSignin" id="signup">Signup</a>
                 </div>
-            </div>
             
              {/* These will be on the other pages just added to see what we need
                 <a href="/" id="profile">Profile</a>
