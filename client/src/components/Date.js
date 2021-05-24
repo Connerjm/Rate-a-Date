@@ -1,7 +1,9 @@
+//Imports.
 import React from "react";
 import Stars from "./Stars";
 import Comments from "./Comments";
 
+//Component function.
 export default function Date(props)
 {
     return (

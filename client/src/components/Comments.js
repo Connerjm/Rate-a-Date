@@ -1,6 +1,8 @@
+//Imports.
 import React from "react";
 import Comment from "./Comment";
 
+//Component function.
 export default function Comments(props)
 {
     return (
@@ -13,6 +15,7 @@ export default function Comments(props)
                 {props.comments ? props.comments.map(comment =>
                     <Comment
                         title={comment.title}
+                        currentRating={comment.currentRating}
                         comment={comment.comment}
                         username={comment.username}
                         date={comment.date}

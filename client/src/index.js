@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-//import Test from "./components/Test";
+//import TESTING from "./components/TESTING";
 
 ReactDOM.render(<App />, document.getElementById("root"));
-//ReactDOM.render(<Testing />, document.getElementById("root"));
+//ReactDOM.render(<TESTING component="DateList"/>, document.getElementById("root"));
 registerServiceWorker();

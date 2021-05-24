@@ -1,6 +1,8 @@
+//Imports.
 import React from "react";
 import Stars from "./Stars";
 
+//Component function.
 export default function DateListItem(props)
 {
     return (
