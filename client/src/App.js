@@ -8,7 +8,8 @@ import NavBar from "./components/Nav/"
 //Pages.
 import Home from "./pages/Home"
 import Results from "./pages/Results";
-import SignupSignin from "./pages/SignupSignin";
+import LoginInfo from "./pages/Signin";
+import SignupInfo from "./pages/Signup";
 import Profile from "./pages/Profile";
 
 //Component function.
@@ -21,7 +22,9 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/results" component={Results} />
-          <Route exact path="/signupsignin" component={SignupSignin} />
+          <Route exact path="/Signin" component={LoginInfo} />
+          <Route exact path="/Signup" component={SignupInfo} />
+
           <Route exact path="/profile" component={Profile} /* User info */ />
         </Switch>
       </div>
