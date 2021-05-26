@@ -8,7 +8,7 @@ export default function Date(props)
 {
     return (
         <div>
-            <img />
+            <img src={props.image}/>
             <div>
                 <div>
                     <h1>{props.title}</h1>
