@@ -11,6 +11,8 @@ const bookSeed = [
     author: "admin",
     body:
       "Great little cocktail bar in Fremont.  Outstanding drinks, staff can be pretty sassy.  Be sure to check out their neon bathrooms.",
+    categories: ["Food and Drink"],
+    location: "Seattle",
     date: new Date(Date.now())
   },
   {
@@ -18,6 +20,8 @@ const bookSeed = [
     author: "admin",
     body:
       "Great place for a day date.  You can have a picnic, visit the conservatory, or go see the asian art museum",
+    categories: ["Adventure"],
+    location: "Seattle",
     date: new Date(Date.now())
   },
   {
@@ -25,6 +29,8 @@ const bookSeed = [
     author: "admin",
     body:
       "Okay so you think this would make a great date idea... It doesn't.  It's crowded, it's stressful, it's overwhelming.  Hard to meet up for a date here.",
+    categories: ["Entertainment"],
+    location: "Seattle",
     date: new Date(Date.now())
   }
 ];
@@ -38,26 +44,26 @@ const userSeed = [
   }
 ];
 
-// db.Post.remove({})
-//   .then(() => db.Post.collection.insertMany(bookSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
-
-db.User.remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
+db.Post.remove({})
+  .then(() => db.Post.collection.insertMany(bookSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
-    console.log(data)
     process.exit(0);
   })
   .catch(err => {
     console.error(err);
     process.exit(1);
   });
+
+// db.User.remove({})
+//   .then(() => db.User.collection.insertMany(userSeed))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     console.log(data)
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
 
