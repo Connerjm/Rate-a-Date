@@ -3,8 +3,11 @@ import "./style.css";
 
 const Hero = props => {
     return (
-        <section className="heroImg"> 
+        <section className="heroImg">
+        <div className="layout">
+        <div className="heart"></div>
             <p className="para">Date ideas to turn the spark into a flame</p>
+            </div>
             <form className="searchForm flex">
 
                 

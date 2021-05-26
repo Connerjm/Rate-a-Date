@@ -1,0 +1,24 @@
+.section-header-spacing {
+    padding: 20px 0px 20px 0px;
+}
+
+.form-container {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#login-card {
+    height: 100vh;
+}
+
+.form-control {
+    height: 60px;
+    border-radius: 12px;
+    background: #F5F5F5;
+}

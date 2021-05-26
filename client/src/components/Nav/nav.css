@@ -5,12 +5,38 @@
     margin-bottom: auto;
     width: auto;
 }
+
 #pages {
     padding-right: 20px;
     margin-top: auto;
     margin-bottom: auto;
     width: auto;
 }
+
+#login:hover {
+    color: rgba(255, 255, 255, 0.753);
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+#signup:hover {
+    color: rgba(255, 255, 255, 0.753);
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+#pages:hover {
+    color: rgba(255, 255, 255, 0.753);
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
 
 .logo {
     padding-left: 12%;
@@ -21,7 +47,7 @@ header {
     top: 0;
     padding-top: 38px;
     padding-bottom: 38px;
-    width: 1140px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
@@ -31,3 +57,20 @@ header {
     justify-content: space-between;
     text-align: right;
 }
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        min-width: 320px;
+        width: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    logo {
+        padding-left: 4%;
+    }
+}
+
