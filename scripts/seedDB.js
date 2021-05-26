@@ -29,13 +29,35 @@ const bookSeed = [
   }
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(bookSeed))
+const userSeed = [
+  {
+    name: "testusername",
+    email: "testemail@email.com",
+    password: "testpassword",
+    date: new Date(Date.now())
+  }
+];
+
+// db.Post.remove({})
+//   .then(() => db.Post.collection.insertMany(bookSeed))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
+
+db.User.remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
+    console.log(data)
     process.exit(0);
   })
   .catch(err => {
     console.error(err);
     process.exit(1);
   });
+
