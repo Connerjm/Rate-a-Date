@@ -3,8 +3,19 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const passport = require("passport");
+const users = require("./routes/api/users");
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+// Bodyparser middleware
+app.use(
+    bodyParser.urlencoded({
+      extended: false
+    })
+  );
+  app.use(bodyParser.json());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -30,7 +41,14 @@ mongoose.connect(
         useCreateIndex: true,
         useFindAndModify: false
     }
-);
+).then(() => console.log("MongoDB successfully connected"));
+
+// Passport middleware
+app.use(passport.initialize());
+// Passport config
+require("./config/passport")(passport);
+// Routes
+app.use("/api/users", users);
 
 //Start the server.
 app.listen(PORT, function() {
