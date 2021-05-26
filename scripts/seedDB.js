@@ -3,9 +3,9 @@ const db = require("../models");
 
 // This file empties the Posts collection and inserts the books below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/rateadate");
 
-const bookSeed = [
+const postSeed = [
   {
     title: "Stampede",
     author: "admin",
@@ -38,26 +38,16 @@ const userSeed = [
   }
 ];
 
-// db.Post.remove({})
-//   .then(() => db.Post.collection.insertMany(bookSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+let postPromise = db.Post.remove({})
+  .then(() => db.Post.collection.insertMany(postSeed));
 
-db.User.remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    console.log(data)
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
-
+let userPromise = db.User.remove({})
+  .then(() => db.User.collection.insertMany(userSeed));
+  
+Promise.all([postPromise, userPromise]).then(values => {
+  console.log(values);
+  process.exit(0);
+}).catch(err => {
+  console.error(err);
+  process.exit(1);
+});
