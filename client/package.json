@@ -4,9 +4,9 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.21.1",
     "effect": "^1.0.4",
     "jotai": "^0.15.3",
-    "axios": "^0.18.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-rating-stars-component": "^2.2.0",

@@ -1,16 +1,16 @@
 import React, {Component} from "react";
-import User from "../components/Profile";
 import { Container} from "../components/Grid";
+import Details from "../components/DetailsCard"
 
 
-class SignupInfo extends Component {
+class Detail extends Component {
     render() {
         return (
           <Container fluid>
-            <User />
+              <Details />
           </Container>
         );
     }
 }
 
-export default SignupInfo;
+export default Detail;

@@ -20,6 +20,7 @@ const MainCard = (props) => {
     getTags();
     getCategories();
     getOccasions();
+    // eslint-disable-next-line
   }, []);
 
   function getTags() {
