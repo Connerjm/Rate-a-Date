@@ -3,7 +3,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //Components.
-import NavBar from "./components/Nav/"
+import NavBar from "./components/Nav/";
+import Footer from "./components/Footer";
 
 //Pages.
 import Home from "./pages/Home"
@@ -29,6 +30,7 @@ export default function App() {
 
           <Route exact path="/profile" component={Profile} /* User info */ />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

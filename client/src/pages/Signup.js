@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Footer from "../components/Footer";
 import { Container} from "../components/Grid";
 import Signup from "../components/Signup"
 
@@ -8,7 +7,6 @@ class SignupInfo extends Component {
         return (
           <Container fluid>
             <Signup />
-            <Footer />
           </Container>
         );
     }

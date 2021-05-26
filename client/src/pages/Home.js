@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MainCard from "../components/MainCard";
-import Footer from "../components/Footer";
 import { Container } from "../components/Grid";
 
 
@@ -24,7 +23,6 @@ class Home extends Component {
     return (
       <Container fluid>
         <MainCard />
-        <Footer />
       </Container>
     );
   }

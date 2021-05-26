@@ -8,7 +8,7 @@ export default function Date(props)
 {
     return (
         <div>
-            <img src={props.image}/>
+            <img src={props.image} alt="Representation of the current date."/>
             <div>
                 <div>
                     <h1>{props.title}</h1>
