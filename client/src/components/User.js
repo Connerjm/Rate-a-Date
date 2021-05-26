@@ -10,7 +10,7 @@ const UserProfile = props => {
     return ( 
         <div className="card-body player">
             <div>
-                <img src="/images/randoUser.png"/>
+                <img src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
                 <h2>Victor Anderson</h2>
                 <a href="/" className="btn filled-default">Add a new Date</a> 
             </div>
@@ -28,7 +28,7 @@ const UserProfile = props => {
 
 export default UserProfile;
 
-
+// eslint-disable-next-line
 {/*(props.ideas.length === 0) ? (
         <div className="card-body">
             <div>

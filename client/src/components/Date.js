@@ -17,7 +17,7 @@ export default function Date(props)
                 <div>
                     <p>Submitted by</p>
                     <p>{props.username}</p>
-                    <img />
+                    <img src={props.userthumbnail} alt="Thumbnail of the assosiated user."/>
                 </div>
             </div>
             <h2>Description</h2>
