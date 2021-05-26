@@ -11,6 +11,7 @@ import Results from "./pages/Results";
 import LoginInfo from "./pages/Signin";
 import SignupInfo from "./pages/Signup";
 import Profile from "./pages/Profile";
+import Details from "./pages/Details";
 
 //Component function.
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/results" component={Results} />
+          <Route exact path="/Details" component={Details} />
           <Route exact path="/Signin" component={LoginInfo} />
           <Route exact path="/Signup" component={SignupInfo} />
 
