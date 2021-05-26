@@ -13,10 +13,11 @@ const Hero = props => {
                     placeholder="Search for ideas"
                     type="text"
                     name="searchIdeas"
-                    onChange={props.handleInputChange}></input>
+                    onChange={props.handleInputChange}
+                    id={props.id}
+                />
 
-                    <a href="/" className="go"><i className="fa fa-search" id="sIcon"></i></a>
-
+                <a className="go" onClick={props.handleFormSubmit}><i className="fa fa-search" id="sIcon"></i></a>
             </form>
         </section>
     );
