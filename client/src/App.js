@@ -12,6 +12,7 @@ import NavBar from "./components/Nav/";
 import Footer from "./components/Footer";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import NewDate from "./components/NewDate";
 
 //Pages.
 import Home from "./pages/Home"
@@ -55,6 +56,7 @@ export default function App() {
           <Route exact path="/Details" component={Details} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/newdateidea" component={NewDate} />
 
           <Route exact path="/profile" component={Profile} /* User info */ />
         </Switch>
