@@ -29,9 +29,9 @@ const postSeed = [
   }
 ];
 
-const userSeed = [
+const usersSeed = [
   {
-    name: "testusername",
+    username: "testusername",
     email: "testemail@email.com",
     password: "testpassword",
     date: new Date(Date.now())
@@ -41,10 +41,10 @@ const userSeed = [
 let postPromise = db.Post.remove({})
   .then(() => db.Post.collection.insertMany(postSeed));
 
-let userPromise = db.User.remove({})
-  .then(() => db.User.collection.insertMany(userSeed));
+let usersPromise = db.User.remove({})
+  .then(() => db.User.collection.insertMany(usersSeed));
   
-Promise.all([postPromise, userPromise]).then(values => {
+Promise.all([postPromise, usersPromise]).then(values => {
   console.log(values);
   process.exit(0);
 }).catch(err => {
