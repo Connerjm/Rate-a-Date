@@ -56,8 +56,10 @@ input {
 .go {
   font-size: 28px;
   align-self: center;
+  background-color: white;
+  border: none;
 }
-a.go {
+button.go {
   color: #9416fb;
 }
 .searchForm {
