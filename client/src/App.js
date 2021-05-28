@@ -11,8 +11,9 @@ import NewDate from "./components/NewDate";
 //Components.
 import NavBar from "./components/Nav/";
 import Footer from "./components/Footer";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
+import Signup from "./pages/Register";
+import Login from "./pages/Login";
+import NewDateIdea from "./pages/NewDate"
 
 
 //Pages.
@@ -55,9 +56,9 @@ export default function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/results" component={Results} />
           <Route exact path="/Details" component={Details} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/newdateidea" component={NewDate} />
+          <Route exact path="/register" component={Signup} />
+          <Route exact path="/Login" component={Login} />
+          <Route exact path="/newdateidea" component={NewDateIdea} />
 
           <Route exact path="/profile" component={Profile} /* User info */ />
         </Switch>
