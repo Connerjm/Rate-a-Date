@@ -57,7 +57,7 @@ export default function App() {
           <Route exact path="/results" component={Results} />
           <Route exact path="/Details" component={Details} />
           <Route exact path="/register" component={Signup} />
-          <Route exact path="/Login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/newdateidea" component={NewDateIdea} />
 
           <Route exact path="/profile" component={Profile} /* User info */ />
