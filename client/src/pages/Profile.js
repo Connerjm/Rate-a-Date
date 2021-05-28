@@ -6,9 +6,9 @@ import { Container} from "../components/Grid";
 class SignupInfo extends Component {
     render() {
         return (
-          <Container fluid>
+          <div>
             <User />
-          </Container>
+          </div>
         );
     }
 }

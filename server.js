@@ -6,7 +6,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+
+
 const PORT = process.env.PORT || 3001;
+
 const app = express();
 
 // Bodyparser middleware

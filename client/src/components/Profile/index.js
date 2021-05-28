@@ -7,7 +7,7 @@ class Signup extends Component {
 
     render() {
         return (
-          <div className="card" style={{ background: "white", }}> 
+          <div className="container" style={{ background: "white" }}> 
             <User />
           </div>
         );

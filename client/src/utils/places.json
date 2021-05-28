@@ -1,15 +1,23 @@
 [
     {
+        "id": 10,
+        "name": "Seattle"
+    },
+    {
+        "id": 9,
+        "name": "Los Angeles"
+    },
+    {
         "id": 8,
-        "name": "Philadephia"
+        "name": "Austin"
     },
     {
         "id": 7,
-        "name": "New York"
+        "name": "Portland"
     },
     {
         "id": 6,
-        "name": "Miami"
+        "name": "Chicago"
     },
     {
         "id": 5,
@@ -17,19 +25,19 @@
     },
     {
         "id": 4,
-        "name": "Portland"
+        "name": "Miami"
     },
     {
         "id": 3,
-        "name": "San Fransisco"
+        "name": "New York"
     },
     {
         "id": 2,
-        "name": "Los Angeles"
+        "name": "Philadelphia"
     },
     {
         "id": 1,
-        "name": "Seattle"
+        "name": "No Location"
     }
 
 ]

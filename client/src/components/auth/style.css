@@ -10,14 +10,17 @@
 .button-group {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
-#login-card {
+#auth-card {
     height: 100vh;
 }
 
-.form-control {
+#username,
+#email,
+#password{
     height: 60px;
     border-radius: 12px;
     background: #F5F5F5;

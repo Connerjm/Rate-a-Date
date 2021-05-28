@@ -14,11 +14,11 @@
     gap: 8px;
 }
 
-#signup-card {
+.newDate{
     height: 100vh;
 }
 
-.form-control {
+#form-control {
     height: 60px;
     border-radius: 12px;
     background: #F5F5F5;

@@ -48,16 +48,18 @@
   }
 }
 
-input {
+input,
+.go {
   border: none;
   position: relative;
   width: fit-content;
+  background-color: white;
 }
 .go {
   font-size: 28px;
   align-self: center;
 }
-a.go {
+button.go {
   color: #9416fb;
 }
 .searchForm {
