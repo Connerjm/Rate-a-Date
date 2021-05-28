@@ -14,13 +14,11 @@
     gap: 8px;
 }
 
-#auth-card {
+.newDate{
     height: 100vh;
 }
 
-#username,
-#email,
-#password{
+#form-control {
     height: 60px;
     border-radius: 12px;
     background: #F5F5F5;

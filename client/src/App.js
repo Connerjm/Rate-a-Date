@@ -6,12 +6,14 @@ import setAuthToken from "./utils/setAuthToken.js";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
+import NewDate from "./components/NewDate";
 
 //Components.
 import NavBar from "./components/Nav/";
 import Footer from "./components/Footer";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+
 
 //Pages.
 import Home from "./pages/Home"
@@ -55,6 +57,7 @@ export default function App() {
           <Route exact path="/Details" component={Details} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/newdateidea" component={NewDate} />
 
           <Route exact path="/profile" component={Profile} /* User info */ />
         </Switch>

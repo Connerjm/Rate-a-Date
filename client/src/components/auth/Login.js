@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "../../../src/index.css";
-import "./style.css";
+import "./style.css"
 import { Container} from "../Grid";
 
 class Login extends Component {
