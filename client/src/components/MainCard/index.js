@@ -48,8 +48,6 @@ const MainCard = (props) => {
 
   return (
     <div>
-
- 
       <section className="container" id="mainCard">
       <Hero />
         <Container fluid>
@@ -63,7 +61,9 @@ const MainCard = (props) => {
               <Row>
                 {tag.map((place) => (
                   <div key={place.id}>
-                    <PlaceTags id={place.id} name={place.name} />
+                    <PlaceTags 
+                    id={place.id} 
+                    name={place.name} />
                   </div>
                 ))}
               </Row>

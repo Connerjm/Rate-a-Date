@@ -12,7 +12,7 @@ const UserProfile = props => {
             <div>
                 <img src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
                 <h2>Victor Anderson</h2>
-                <a href="/" className="btn filled-default">Add a new Date</a> 
+                <a href="/newdateidea" className="btn filled-default">Add a new Date</a> 
             </div>
             <div className="article">
                 <h3>My Date Ideas</h3>

@@ -18,7 +18,9 @@
     height: 100vh;
 }
 
-.form-control {
+#email,
+#password,
+#username {
     height: 60px;
     border-radius: 12px;
     background: #F5F5F5;
