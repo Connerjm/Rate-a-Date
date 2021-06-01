@@ -3,7 +3,6 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div className="row">
       <footer>
         <div className="footer-container">
           <p className="footer-text">2021 Spark.com</p>
@@ -17,7 +16,6 @@ function Footer() {
           </a>
         </div>
       </footer>
-    </div>
   );
 }
 
