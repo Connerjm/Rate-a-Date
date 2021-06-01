@@ -12,51 +12,69 @@ const mapStyles = {
   };
 
 class NewDate extends Component {
+    constructor() {
+        super();
+        this.state = {
+            title: "",
+            category: "",
+            description: "",
+            address: ""
+        };
+    }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value })
+    }
+    onSubmit = e => {
+        e.preventDefault();
+
+        const newPost = {
+            title: this.state.title,
+            category: this.state.category,
+            address: this.state.address,
+            description: this.state.description
+        }
+        //this.props.addPost(newPost, this.props.history);
+        console.log(newPost)
+    }
 
     render() {
         return (
-        <div className="form-container">
-            <h2 className="section-header-spacing">Add Date Idea</h2>
+            <div className="form-container">
+                <h2 className="section-header-spacing">Add Date Idea</h2>
                 <form noValidate onSubmit={this.onSubmit}>
-                    <div className="form-group">
+                    <div className="input-field">
                         <label htmlFor="title" id="title">Date name* (i.e. location, activity)</label>
                         <input
                             onChange={this.onChange}
-                            //value={this.state.username}
-                            id="form-control"
+                            value={this.state.title}
+                            id="title"
                             type="text"
                         />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="category" id="category">Category* (i.e. Romantic, Adventure, Sporty)</label>
+                    <div>
+                    <label htmlFor="description" id="description">Description</label>
                         <input
                             onChange={this.onChange}
-                            //value={this.state.username}
-                            id="form-control"
+                            value={this.state.description}
+                            id="description"
                             type="text"
                         />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="occasion" id="Occasion">Occasion (i.e. Birthday, Holidays, Valentines)</label>
-                        <select>
-                            <option>Select One</option>
-                            <option>Birthday</option>
-                            <option>Holiday</option>
-                            <option>Valentines Day</option>
-                            <option>Anniversary</option>
-                            <option>Thank You</option>
-                            <option>Halloween</option>
-                            <option>Congratulations</option>
-                            <option>New Year</option>
-                            <option>N/A</option>
-                        </select>
+                    <div className="input-field form-group">
+                        <label htmlFor="category" id="category">Category or Occasion* (i.e. Romantic, Adventure, Sporty, New Year)</label>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.category}
+                            id="category"
+                            type="text"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="address" id="address">Address (Optional)</label>
                         <input
                             onChange={this.onChange}
-                            //value={this.state.username}
-                            id="form-control"
+                            value={this.state.address}
+                            id="address"
                             type="text"
                         />
                         <div className="card" id="map">
@@ -98,6 +116,7 @@ class NewDate extends Component {
         )
     }
 }
+
 
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyBaML4zWmgGYcFRxJCcSBr--JU9QP8PBIw'
