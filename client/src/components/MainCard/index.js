@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col } from "../Grid";
-import Hero from "../Hero";
 import "./style.css";
 import { useAtom } from "jotai";
 import places from "../../utils/places.json";
 import PlaceTags from "../Place-Tags";
 import { Places, Categories, Occasions } from "../../utils/Atoms";
-import CategoryCard from "../CategoryCard";
+import CatOccCard from "../CatOccCard";
 import categories from "../../utils/categories.json";
 import occasions from "../../utils/occasions.json";
-import OccasionCard from "../OccasionCards";
+
+
 
 const MainCard = (props) => {
+
   const [tag, setTags] = useAtom(Places);
   const [category, setCategories] = useAtom(Categories);
   const [occasion, setOccasions] = useAtom(Occasions);
@@ -20,8 +20,7 @@ const MainCard = (props) => {
     getTags();
     getCategories();
     getOccasions();
-    // eslint-disable-next-line
-  }, []);
+  });
 
   function getTags() {
     let currentPage = window.location.pathname;
@@ -45,73 +44,70 @@ const MainCard = (props) => {
       setOccasions(occasions);
     }
   }
+  
 
   return (
     <div>
+      <div className="row">
+        <div className="col-12">
+          <div className="section-header-spacing">
+            <i className="fas fa-map-marker-alt">
+              <span className="pl-3">Dates by Location</span>
+            </i>
+          </div>
+          <div className="row">
+            {tag.map((place) => (
+              <div key={place.id}>
+                <PlaceTags id={place.id} name={place.name} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
- 
-      <section className="container" id="mainCard">
-      <Hero />
-        <Container fluid>
-          <Row>
-            <Col size="12">
-              <div className="section-header-spacing">
-                <i class="fas fa-map-marker-alt">
-                  <span className="pl-3">Dates by Location</span>
-                </i>
+      <div className="row">
+        <div className="col-12">
+          <div className="section-header-spacing">
+            <i className="fas fa-map-marker-alt">
+              <span className="pl-3">Dates by Category</span>
+            </i>
+          </div>
+          <div className="row">
+            {category.map((categor) => (
+              <div key={categor.id}>
+                <CatOccCard
+                  onClick={categor.handleClick}
+                  id={categor.id}
+                  image={categor.image}
+                  name={categor.name}
+                  value={categor.name}
+                />
               </div>
-              <Row>
-                {tag.map((place) => (
-                  <div key={place.id}>
-                    <PlaceTags id={place.id} name={place.name} />
-                  </div>
-                ))}
-              </Row>
-            </Col>
-          </Row>
+            ))}
+          </div>
+        </div>
 
-          <Row>
-            <Col size="12">
-              <div className="section-header-spacing">
-                <i class="fas fa-map-marker-alt">
-                  <span className="pl-3">Dates by Category</span>
-                </i>
+        <div className="col">
+          <div className="section-header-spacing">
+            <i className="fas fa-map-marker-alt">
+              <span className="pl-3">Dates by Occasion</span>
+            </i>
+          </div>
+          <div className="row">
+            {occasion.map((occ) => (
+              <div key={occ.id}>
+                <CatOccCard
+                  onClick={occ.handleClick}
+                  id={occ.id}
+                  image={occ.image}
+                  name={occ.name}
+                  value={occ.name}
+                />
               </div>
-              <Row>
-                {category.map((categor) => (
-                  <div key={categor.id}>
-                    <CategoryCard
-                      id={categor.id}
-                      image={categor.image}
-                      name={categor.name}
-                    />
-                  </div>
-                ))}
-              </Row>
-            </Col>
-    
-            <Col size="12">
-              <div className="section-header-spacing">
-                <i class="fas fa-map-marker-alt">
-                  <span className="pl-3">Dates by Occasion</span>
-                </i>
-              </div>
-              <Row>
-                {occasion.map((occ) => (
-                  <div key={occ.id}>
-                    <OccasionCard
-                      id={occ.id}
-                      image={occ.image}
-                      name={occ.name}
-                    />
-                  </div>
-                ))}
-              </Row>
-            </Col>
-            
-          </Row>
-        </Container>
-      </section>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Container} from "../components/Grid";
 import Register from "../components/auth/Register"
 
 

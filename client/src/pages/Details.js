@@ -1,14 +1,15 @@
 import React, {Component} from "react";
-import { Container} from "../components/Grid";
-import Details from "../components/DetailsCard"
+import Date from "../components/Date";
 
 
 class Detail extends Component {
     render() {
         return (
-          <Container fluid>
-              <Details />
-          </Container>
+              <section className="container">
+                <div className="article">
+                    <Date />
+                </div>
+              </section>
         );
     }
 }

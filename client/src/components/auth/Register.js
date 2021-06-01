@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { Container} from "../Grid";
 import "../../../src/index.css";
 import "./style.css";
 
@@ -56,7 +55,6 @@ class Register extends Component {
 
     return (
       <div id="auth-card">
-      <Container fluid>
         <div className="container">
           <div className="form-container">
             <h2 className="section-header-spacing">Sign up for an account</h2>
@@ -117,7 +115,6 @@ class Register extends Component {
             </form>
           </div>
         </div>
-      </Container>
       </div>
     );
   }
