@@ -52,7 +52,6 @@ export default function TESTING(props)
             break;
         case "DateList":
             component = <DateList
-                header="Saved"
                 dates={[{image:"TODO", title:"Seattle Waterfront", location:"Seattle", category:"Romantic", tags:["Outdoors", "Cheap"], description:"Walk the waterfront and see the sights. Can spend as much or as little as you'd like.", currentRating:5}, {image:"TODO", title:"Comicon", location:"Seattle", category:"Fun", tags:["Indoors", "Public", "Expensive"], description:"Perfect laidback date for nerds. A tad expensive though.", currentRating:4}]}
             />;
             break;

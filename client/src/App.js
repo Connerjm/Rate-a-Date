@@ -6,7 +6,6 @@ import setAuthToken from "./utils/setAuthToken.js";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import NewDate from "./components/NewDate";
 
 //Components.
 import NavBar from "./components/Nav/";
@@ -60,7 +59,7 @@ export default function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/newdateidea" component={NewDateIdea} />
 
-          <Route exact path="/profile" component={Profile} /* User info */ />
+          <Route exact path="/Profile" component={Profile} /* User info */ />
         </Switch>
         <Footer />
       </div>
