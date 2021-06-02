@@ -1,20 +1,34 @@
 import React, {Component} from "react";
 import TESTING from "../components/TESTING";
+import { logoutUser } from "../actions/authActions";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 
 class Profile extends Component {
+  constructor(props) {
+    super(props)
+    console.log(props)
+}
+
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
+
     render() {
+      const { user } = this.props.auth;
         return (
           <div className="container">
             <div className="card-body player">
             <div className="profile-card-header">
             <div className="flex-row">
                 <img className="avatar-lrg" src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
-                <h1 className="hero-header align-center">Victor Andersen</h1>
+                <h1 className="hero-header align-center">{user.username}</h1>
             </div>
                 <div className="button-group">
                 <a href="/newdateidea" className="large filled-default">Add a new Date</a> 
-                <button className="large outline-danger" onClick={this.onLogoutClick}>logout</button>
+                <a className="large outline-danger" onClick={this.onLogoutClick}>logout</a>
                 </div>
             </div>
               <div className="article">
@@ -39,4 +53,16 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+Profile.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Profile);
