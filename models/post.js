@@ -5,6 +5,9 @@ const postSchema = new Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
   body: String,
+  Category: { type: String, required: true },
+  Location: { type: String },
+  Tag: { type: String },
   date: { type: Date, default: Date.now }
 });
 
