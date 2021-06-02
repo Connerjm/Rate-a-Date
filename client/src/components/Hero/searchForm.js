@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "./style.css";
 
 
@@ -16,7 +17,11 @@ class SearchForm extends Component {
     onSubmit = e => {
         e.preventDefault();
         console.log(this.state);
-
+        if (this.state.search && this.state.search !== "")
+        {
+            sessionStorage.setItem("search-term", this.state.search);
+            window.location.replace("/results");
+        }
     }
 
     
