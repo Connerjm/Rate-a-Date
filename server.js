@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+const posts = require("./routes/api/posts");
+const comments = require("./routes/api/comments");
 
 
 const PORT = process.env.PORT || 3001;
@@ -52,6 +54,9 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
+app.use("/api/posts", posts);
+app.use("/api/comments", comments);
+
 
 //Start the server.
 app.listen(PORT, function() {

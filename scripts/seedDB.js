@@ -38,13 +38,24 @@ const usersSeed = [
   }
 ];
 
+const commentSeed = [
+  {
+    user: "Test User",
+    content: "This place sucks frfr",
+    post_name: "Space Needle"
+  }
+]
+
 let postPromise = db.Post.remove({})
   .then(() => db.Post.collection.insertMany(postSeed));
 
 let usersPromise = db.User.remove({})
   .then(() => db.User.collection.insertMany(usersSeed));
+
+  let commentsPromise = db.User.remove({})
+  .then(() => db.Comment.collection.insertMany(commentSeed));
   
-Promise.all([postPromise, usersPromise]).then(values => {
+Promise.all([postPromise, usersPromise, commentsPromise]).then(values => {
   console.log(values);
   process.exit(0);
 }).catch(err => {
