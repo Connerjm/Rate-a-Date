@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import "./style.css";
 
 
@@ -23,8 +22,6 @@ class SearchForm extends Component {
             window.location.replace("/results");
         }
     }
-
-    
 
     render() {
         return(
