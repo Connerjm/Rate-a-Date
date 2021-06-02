@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom"
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "../../../src/index.css";
 import "./style.css"
 
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: "",
       password: "",
@@ -19,7 +20,7 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push("/Profile");
     }
   }
 
@@ -48,6 +49,7 @@ class Login extends Component {
     };
 
     this.props.loginUser(userData);
+    
   };
 
   render() {
@@ -57,7 +59,7 @@ class Login extends Component {
       <div className="form-container">
         <h2 className="section-header-spacing">Sign in</h2>
         <form noValidate onSubmit={this.onSubmit}>
-          <div className="input-field form-group">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               onChange={this.onChange}
@@ -65,7 +67,7 @@ class Login extends Component {
               error={errors.email}
               id="email"
               type="email"
-              className={classnames("", {
+              className={classnames("form-control", {
                 invalid: errors.email || errors.emailnotfound
               })}
             />
@@ -74,7 +76,7 @@ class Login extends Component {
               {errors.emailnotfound}
             </span>
           </div>
-          <div className="input-field form-group">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
               onChange={this.onChange}
@@ -82,7 +84,7 @@ class Login extends Component {
               error={errors.password}
               id="password"
               type="password"
-              className={classnames("", {
+              className={classnames("form-control", {
                 invalid: errors.password || errors.passwordincorrect
               })}
             />
@@ -120,4 +122,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { loginUser }
-)(Login);
+)(withRouter(Login));
