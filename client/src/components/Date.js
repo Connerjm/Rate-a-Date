@@ -8,16 +8,18 @@ export default function Date(props)
 {
     return (
         <div>
-            <img src={props.image} alt="Representation of the current date."/>
+            {/* <img className="details-img" src={props.image} alt="Representation of the current date."/> */}
+            <img className="details-img" src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4219&q=80" alt="Representation of the current date."/>
             <div>
-                <div>
+                <div className="details-section-header-spacing">
                     <h1>{props.title}</h1>
                     <Stars currentRating={props.currentRating}/>
                 </div>
                 <div>
-                    <p>Submitted by</p>
-                    <p>{props.username}</p>
-                    <img src={props.userthumbnail} alt="Thumbnail of the assosiated user."/>
+                    <p className="username-text neutral">Submitted by</p>
+                    <p className="username-text">{props.username}</p>
+                    {/* <img className="avatar-sml" src={props.userthumbnail} alt="Thumbnail of the assosiated user."/> */}
+                    <img className="avatar-sml" src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
                 </div>
             </div>
             <h2>Description</h2>

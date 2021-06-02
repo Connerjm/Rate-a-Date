@@ -19,11 +19,15 @@ class UserProfile extends Component {
     render () {
     return ( 
         <div className="card-body player">
-            <div>
-                <img src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
-                <h2>Victor</h2>
-                <a href="/newdateidea" className="btn filled-default">Add a new Date</a> 
-                <button onClick={this.onLogoutClick}>logout</button>
+            <div className="profile-card-header">
+            <div className="flex-row">
+                <img className="avatar-lrg" src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
+                <h1 className="hero-header align-center">Victor Andersen</h1>
+            </div>
+                <div className="button-group">
+                <a href="/newdateidea" className="large filled-default">Add a new Date</a> 
+                <button className="large outline-danger" onClick={this.onLogoutClick}>logout</button>
+                </div>
             </div>
             <div className="article">
                 <h3>My Date Ideas</h3>

@@ -62,7 +62,7 @@ class Login extends Component {
           <div className="form-container">
           <h2 className="section-header-spacing">Sign in</h2>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field form-group">
+              <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   onChange={this.onChange}
@@ -70,7 +70,7 @@ class Login extends Component {
                   error={errors.email}
                   id="email"
                   type="email"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.email || errors.emailnotfound
                   })}
                 />
@@ -79,7 +79,7 @@ class Login extends Component {
                   {errors.emailnotfound}
                 </span>
               </div>
-              <div className="input-field form-group">
+              <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
                   onChange={this.onChange}
@@ -87,7 +87,7 @@ class Login extends Component {
                   error={errors.password}
                   id="password"
                   type="password"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.password || errors.passwordincorrect
                   })}
                 />

@@ -61,7 +61,7 @@ class Register extends Component {
           <div className="form-container">
             <h2 className="section-header-spacing">Sign up for an account</h2>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field form-group">
+              <div className="form-group">
                 <label htmlFor="username" id="username-input">Username</label>
                 <input
                   onChange={this.onChange}
@@ -69,7 +69,7 @@ class Register extends Component {
                   error={errors.username}
                   id="username"
                   type="text"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.username
                   })}
                 />
@@ -83,7 +83,7 @@ class Register extends Component {
                   error={errors.email}
                   id="email"
                   type="email"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.email
                   })}
                 />
@@ -97,7 +97,7 @@ class Register extends Component {
                   error={errors.password}
                   id="password"
                   type="password"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.password
                   })}
                 />

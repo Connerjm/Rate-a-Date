@@ -4,8 +4,8 @@ import "./style.css";
 
 const Details = (props) => {
   return (
-    <div>
-        <section className="card">
+    <div className="container">
+        <section>
             <div className="article">
                     <li className="idea-list list-group-item">
                         <div className="listResults row">
