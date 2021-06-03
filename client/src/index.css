@@ -102,6 +102,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    min-width: 320px;
     height: fit-content;
     padding-bottom: 32px;
 }
@@ -284,15 +285,7 @@ header {
     transform: scale(0.95);
   }
 
-p:hover {
-    color: #16FBD2;
-    -webkit-transition: color 0.2s ease-out;
-    -moz-transition: color 0.2s ease-out;
-    -o-transition: color 0.2s ease-out;
-    transition: color 0.2s ease-out;
-    color: white;
-    text-decoration: none;
-}
+
 
 /* ------------------------------------------------------------------ */
 /* Buttons
@@ -528,6 +521,9 @@ p:hover {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    border-radius: var(--border-radius-sm);
+    height: 32px;
+    display: block;
 }
 
 .tag-text {
@@ -639,5 +635,229 @@ p:hover {
 	50% { transform: rotate(45deg) scale(1.2); }
 	70% { transform: rotate(45deg) scale(1.4); }
 	100% { transform: rotate(45deg) scale(1); }
+}
+
+/* ------------------------------------------------------------------ */
+/* Date List Item
+/* ------------------------------------------------------------------ */
+
+.date-img {
+    height: 172px;
+    width: 260px;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-lg);
+    border-bottom-left-radius: var(--border-radius-lg);
+}
+
+@media only screen and (max-width: 880px) {
+    .date-img {
+        height: 172px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: var(--border-radius-lg);
+        border-top-right-radius: var(--border-radius-lg);
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.date-card {
+    background-color: var(--secondary-background);
+    border: 1px solid #E0E0E0;
+    height: 172px;
+    width: 100%;
+    min-width: 320px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 0px;
+    transition: transform .2s;
+  }
+
+  @media only screen and (max-width: 880px) {
+    .date-card {
+        height: fit-content;
+    }
+}
+
+.date-card:hover {
+    transform: scale(1.01);
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.158), 0 6px 20px 0 rgba(0, 0, 0, 0.103);
+}
+
+.date-card:active {
+    transform: scale(0.95);
+}
+
+.date-card-content {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 8px;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 880px) {
+    .date-card-content {
+        flex-wrap: wrap;
+    }
+}
+
+.date-card-title {
+  font-size: 20px;
+  color: var(--default-foreground);
+  text-align: left;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.date-card-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 880px) {
+    .date-card-header {
+        padding-top: 0px;
+        padding-left: 20px;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+}
+
+.date-card-description {
+  font-size: 16px;
+  color: var(--secondary-foreground);
+  line-height: 150%;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 880px) {
+    .date-card-description{
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-content: center;
+}
+
+.right {
+    right: 0px;
+}
+
+.card-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 880px) {
+    .card-footer-container {
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+}
+
+.tag-list-item {
+    display: block;
+}
+
+/* ------------------------------------------------------------------ */
+/* Profile card
+/* ------------------------------------------------------------------ */
+
+.profile-card-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    min-width: 320px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.align-center {
+    padding-top: 50px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* details
+/* ------------------------------------------------------------------ */
+
+
+.details-img {
+    /* position: absolute; */
+    width: 100%;
+    height: 468px;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .details-img {
+      height: auto;
+    }
+  }
+
+  .details-section-header-spacing {
+    padding: 20px 32px 20px 32px;
+}
+
+.username-text {
+    color: var(--default);
+    font-size: var(--caption);
+    font-weight: var(--body);
+}
+
+.neutral {
+    color: var(--default-foreground);
+}
+
+.avatar-lockup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 

@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -9,8 +8,8 @@ import "../../../src/index.css";
 import "./style.css";
 
 class Register extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       username: "",
       email: "",
@@ -22,7 +21,7 @@ class Register extends Component {
   componentDidMount() {
     // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push("/Profile");
     }
   }
 
@@ -41,13 +40,13 @@ class Register extends Component {
   onSubmit = e => {
     e.preventDefault();
 
-    const newUser = {
+    const userData = {
       username: this.state.username,
       email: this.state.email,
       password: this.state.password
     };
 
-    this.props.registerUser(newUser, this.props.history);
+    this.props.registerUser(userData, this.props.history);
   };
 
   render() {
@@ -59,7 +58,7 @@ class Register extends Component {
           <div className="form-container">
             <h2 className="section-header-spacing">Sign up for an account</h2>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field form-group">
+              <div className="form-group">
                 <label htmlFor="username" id="username-input">Username</label>
                 <input
                   onChange={this.onChange}
@@ -67,13 +66,13 @@ class Register extends Component {
                   error={errors.username}
                   id="username"
                   type="text"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.username
                   })}
                 />
                 <p className="errors">{errors.username}</p>
               </div>
-              <div className="input-field form-group">
+              <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   onChange={this.onChange}
@@ -81,13 +80,13 @@ class Register extends Component {
                   error={errors.email}
                   id="email"
                   type="email"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.email
                   })}
                 />
                 <p className="errors">{errors.email}</p>
               </div>
-              <div className="input-field form-group">
+              <div className="form-group">
               <label htmlFor="password">Password</label>
                 <input
                   onChange={this.onChange}
@@ -95,7 +94,7 @@ class Register extends Component {
                   error={errors.password}
                   id="password"
                   type="password"
-                  className={classnames("", {
+                  className={classnames("form-control", {
                     invalid: errors.password
                   })}
                 />
