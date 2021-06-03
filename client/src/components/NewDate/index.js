@@ -26,7 +26,9 @@ class NewDate extends Component {
             occasion: "",
             description: "",
             address: "",
-            username: ""
+            username: "",
+            id: ""
+
         };
     }
     
@@ -53,7 +55,8 @@ class NewDate extends Component {
             occasion: this.state.occasion,
             address: this.state.address,
             description: this.state.description,
-            username: this.state.username
+            username: this.state.username,
+            id: this.state.title
         }
         console.log(postData)
         this.props.newPost(postData, this.props.history);

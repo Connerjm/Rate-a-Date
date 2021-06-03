@@ -8,6 +8,7 @@ const postSchema = new Schema({
   occasion: { type: String},
   address: { type: String },
   description: { type: String },
+  id: { type: String},
   date: { type: Date, default: Date.now }
 });
 
