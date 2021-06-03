@@ -3,7 +3,7 @@ import React from "react";
 function CatOccCard(props) {
     return (
         <div className="catOccCards p-5">
-            <a href="/">
+            <a onClick={()=>{return props.onClick}}>
                 <div className="card card-text" style={{ backgroundImage: `url(${props.image})` }}>
                     <div className="card-body">
                         <h5 className="card-title">{props.name}</h5>

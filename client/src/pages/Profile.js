@@ -4,17 +4,22 @@ import { logoutUser } from "../actions/authActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-
 class Profile extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
-}
-
+    console.log(props);
+    }
+    
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
+  handleClick = e => {
+    e.preventDefault();
+    console.log(this.props.auth.user.username);
+    sessionStorage.setItem("user", this.props.auth.user.username);
+    window.location.replace("/newdateidea");
+  }
 
     render() {
       const { user } = this.props.auth;
@@ -27,7 +32,7 @@ class Profile extends Component {
                 <h1 className="hero-header align-center">{user.username}</h1>
             </div>
                 <div className="button-group">
-                <a href="/newdateidea" className="large filled-default">Add a new Date</a> 
+                <a onClick={this.handleClick} className="large filled-default">Add a new Date</a> 
                 <a className="large outline-danger" onClick={this.onLogoutClick}>logout</a>
                 </div>
             </div>
@@ -36,7 +41,7 @@ class Profile extends Component {
                 <li className="idea-list list-group-item">
                   <div className="listResults row">
                     <div className="row">
-                      <TESTING component="DateList" />
+                    <TESTING component="DateList" />
                     </div>
                   </div>
                 </li>

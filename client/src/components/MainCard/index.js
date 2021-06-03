@@ -97,6 +97,7 @@ const MainCard = (props) => {
             {occasion.map((occ) => (
               <div key={occ.id}>
                 <CatOccCard
+                  onClick={()=>{return props.onClick}}
                   onClick={occ.handleClick}
                   id={occ.id}
                   image={occ.image}
