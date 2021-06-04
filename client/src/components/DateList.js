@@ -11,14 +11,14 @@ export default function DateList(props)
             <h1>{props.header}</h1>
             <div>
                 {/* Create new date item for each date. */}
-                {props.dates.map(date =>
+                {props.posts.map(post =>
                     <DateListItem
-                        title={date.title}
-                        location={date.location}
-                        category={date.category}
-                        tags={date.tags}
-                        description={date.description}
-                        rating={date.rating}
+                        title={post.title}
+                        location={post.location}
+                        category={post.category}
+                        tags={post.tags}
+                        description={post.description}
+                        rating={post.rating}
                     />)}
             </div>
         </React.Fragment>

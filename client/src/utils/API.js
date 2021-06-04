@@ -3,12 +3,12 @@ import axios from "axios";
 export default
 {
     //Get dates based on search term.
-    getDates: function(term) {
-        return axios.get(`/api/dates/${term}`);
+    getPosts: function(term) {
+        return axios.get(`/api/posts/${term}`);
     },
     //Get single date by id.
-    getDate: function(id) {
-        return axios.get(`/api/dates/${id}`);
+    getPost: function(id) {
+        return axios.get(`/api/posts/${id}`);
     },
     newPost: function(postData) {
         return axios.create(`/api/posts/${postData}`);
