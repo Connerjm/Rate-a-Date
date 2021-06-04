@@ -1,5 +1,6 @@
 //Imports.
 import React from "react";
+import MetaTags from "./MetaTags";
 import Stars from "./Stars";
 
 //Component function.
@@ -20,10 +21,10 @@ export default function DateListItem(props)
                     {/* Always exactly one category. */}
                     <p className="tag tag-text">{props.category}</p>
                     {/* 0 or more tags. */}
-                       {/*{props.tags ? <ul>
+                       {props.tags ? <ul>
                         {props.tags.map(tag =>
-                            <li className="tag tag-text">{tag}</li>)}
-                        </ul> : <></>} */}
+                            <li className="tag tag-text"><MetaTags type={tag.type} content={tag.content} /></li>)}
+                        </ul> : <></>}
                         </div>
                     </div>
                 {/* Middle part with just the description. */}
