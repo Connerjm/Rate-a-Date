@@ -50,7 +50,7 @@
 html {
     background-image: linear-gradient(-45deg, #E6016F, #FF7608);
     background-repeat: no-repeat;
-    height: auto;
+    background-size: cover;
 }
 
 a {
@@ -79,8 +79,9 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     margin: 0px;
-    background-size: auto;
+    background-size: cover;
 }
+
 
 @keyframes gradient {
 	0% {
@@ -105,6 +106,17 @@ a:hover {
     min-width: 320px;
     height: fit-content;
     padding-bottom: 32px;
+}
+
+.no-bg {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 560px) {
+    .container {
+        width: 96%;
+    }
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
@@ -667,10 +679,6 @@ header {
     width: 100%;
     min-width: 320px;
     border-radius: var(--border-radius-lg);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-right: 0px;
@@ -699,7 +707,6 @@ header {
   padding-bottom: 8px;
   flex-wrap: nowrap;
   gap: 20px;
-  width: 100%;
 }
 
 @media only screen and (max-width: 880px) {
@@ -721,8 +728,7 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 12px;
-    padding-top: 12px;
-    padding-right: 12px;
+    padding-top: 16px;
     width: 100%;
     justify-content: space-between;
 }
@@ -770,7 +776,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 880px) {
@@ -788,6 +793,15 @@ header {
     display: block;
 }
 
+.card-details-container {
+    width: 100%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* ------------------------------------------------------------------ */
 /* Profile card
 /* ------------------------------------------------------------------ */
@@ -799,7 +813,7 @@ header {
     gap: 20px;
     align-content: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    padding: 32px;
     min-width: 320px;
 }
 
@@ -807,6 +821,15 @@ header {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 880px) {
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 .align-center {
@@ -843,6 +866,29 @@ header {
 
   .details-section-header-spacing {
     padding: 20px 32px 20px 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.details-section-spacing {
+    padding: 20px 32px 20px 32px;
+}
+
+.avatar-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    right: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    gap: 12px;
 }
 
 .username-text {

@@ -3,7 +3,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-      <footer>
+      <footer className="container no-bg">
         <div className="footer-container">
           <p className="footer-text">2021 Spark.com</p>
 

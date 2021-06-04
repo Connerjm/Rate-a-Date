@@ -25,7 +25,7 @@ class Profile extends Component {
       const { user } = this.props.auth;
         return (
           <div className="container">
-            <div className="card-body player">
+            <div>
             <div className="profile-card-header">
             <div className="flex-row">
                 <img className="avatar-lrg" src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
@@ -36,19 +36,19 @@ class Profile extends Component {
                 <a className="large outline-danger" onClick={this.onLogoutClick}>logout</a>
                 </div>
             </div>
-              <div className="article">
+              <div className="details-section-spacing">
                 <h3>My Date Ideas</h3>
                 <li className="idea-list list-group-item">
-                  <div className="listResults row">
-                    <div className="row">
+                  <div>
+                    <div>
                     <TESTING component="DateList" />
                     </div>
                   </div>
                 </li>
               </div>
-              <div className="article">
+              <div className="details-section-spacing">
                 <h3>Saved Dates</h3>
-                <li>
+                <li className="list-group-item">
                   <TESTING component="DateList" />
                 </li>
               </div>

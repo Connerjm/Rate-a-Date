@@ -8,14 +8,11 @@ import { Map, GoogleApiWrapper } from 'google-maps-react';
 import { newPost } from "../../actions/authActions";
 
 
-
-
 const mapStyles = {
     width: '100%',
     height: '100%'
   };
 
-  
 
 class NewDate extends Component {
     constructor(props) {
@@ -67,42 +64,46 @@ class NewDate extends Component {
         const { user } = this.props.auth;
         return (
             <div className="form-container">
-                <h2 className="section-header-spacing">Add Date Idea</h2>
+                <h1 className="section-header-spacing">Add Date Idea</h1>
                 <form noValidate onSubmit={this.onSubmit}>
-                    <div className="input-field">
-                        <label htmlFor="title" id="title">Date name* (i.e. location, activity)</label>
+                    <div className="form-group">
+                        <label htmlFor="title" id="title">Date name* (i.e. Fun with Victor)</label>
                         <input
                             onChange={this.onChange}
                             value={this.state.title}
                             id="title"
                             type="text"
+                            className="form-control"
                         />
                     </div>
-                    <div>
-                    <label htmlFor="description" id="description">Description</label>
+                    <div className="form-group">
+                    <label htmlFor="description" id="description">Description (I just want to spend all my time with Victor)</label>
                         <input
                             onChange={this.onChange}
                             value={this.state.description}
                             id="description"
                             type="text"
+                            className="form-control"
                         />
                     </div>
-                    <div className="input-field form-group">
-                        <label htmlFor="category" id="category">Category* (i.e. Romantic, Adventure, Sporty)</label>
+                    <div className="form-group">
+                        <label htmlFor="category" id="category">Category* (i.e. Romantic Victor, Adventurous Victor, Sporty Victor)</label>
                         <input
                             onChange={this.onChange}
                             value={this.state.category}
                             id="category"
                             type="text"
+                            className="form-control"
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="occasion" id="Occasion">Occasion (i.e. Birthday, Holidays, Valentines)</label>
+                        <label htmlFor="occasion" id="Occasion">Occasion (i.e. Victor's Birthday, Holiday with Victor, Valentines with Victor)</label>
                         <select 
                         onChange={this.onChange} 
                         value={this.state.occasion}
                         id="occasion"
-                        type="dropdown">
+                        type="dropdown"
+                        className="form-control">
                             <option>Select One</option>
                             <option value="Birthday">Birthday</option>
                             <option value="Holiday">Holiday</option>
@@ -116,12 +117,13 @@ class NewDate extends Component {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="address" id="address">Address (Optional)</label>
+                        <label htmlFor="address" id="address">Address (Victor's house)</label>
                         <input
                             onChange={this.onChange}
                             value={this.state.address}
                             id="address"
                             type="text"
+                            className="form-control"
                         />
                         {/*<div className="card" id="map">
                             <Map
@@ -139,12 +141,14 @@ class NewDate extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="picture" id="picture">Add Photo</label>
+                        <div className="button-group">
                         <button className="medium outline-default">
                             upload from my device
                                 </button>
                         <button className="medium outline-danger">
                             Remove
                                 </button>
+                                </div>
                     </div>
                     <div className="button-group">
                         <button
@@ -153,7 +157,7 @@ class NewDate extends Component {
                         >
                             Save
                                 </button>
-                        <a href="/Profile" className="large outline-default">
+                        <a href="/Profile" className="large filled-danger">
                             Cancel
                                     </a>
                     </div>

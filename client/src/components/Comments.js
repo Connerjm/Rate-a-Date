@@ -9,7 +9,7 @@ export default function Comments(props)
         <div>
             <div>
                 <h2>Comments ({props.comments ? props.comments.length : 0})</h2>
-                <button>Add Comment</button>
+                <button className="large filled-default">Add Comment</button>
             </div>
             <div>
                 {props.comments ? props.comments.map(comment =>
