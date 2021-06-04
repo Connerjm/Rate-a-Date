@@ -18,6 +18,7 @@ router.post("/newdateidea", (req, res) => {
 })
 
 
+
 router
   .route("/:id")
   .get(postsController.findById)

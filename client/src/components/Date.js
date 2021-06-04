@@ -28,7 +28,7 @@ export default function Date(props) {
             <h2>Description</h2>
             <p>{props.description}</p>
             <h2>Address</h2>
-            <p>{props.location}</p>
+            <p>{props.address}</p>
             <div className="card">{props.map}</div>
             <Comments comments={props.comments} />
             </div>
