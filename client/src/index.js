@@ -7,5 +7,5 @@ import registerServiceWorker from "./registerServiceWorker";
 //import TESTING from "./components/TESTING";
 
 ReactDOM.render(<App />, document.getElementById("root"));
-//ReactDOM.render(<TESTING component="MetaTags"/>, document.getElementById("root"));
+//ReactDOM.render(<TESTING component="Avatars"/>, document.getElementById("root"));
 registerServiceWorker();

@@ -7,6 +7,7 @@ import Date from "./Date";
 import DateListItem from "./DateListItem";
 import DateList from "./DateList";
 import MetaTags from "./MetaTags";
+import Avatars from "./Avatars";
 
 export default function TESTING(props)
 {
@@ -60,6 +61,16 @@ export default function TESTING(props)
                 type="tag"
                 content="Outdoors"
             />;
+            break;
+        case "Avatars":
+            component = <React.Fragment>
+                <Avatars id={1} />
+                <Avatars id={2} />
+                <Avatars id={3} />
+                <Avatars id={4} />
+                <Avatars id={5} />
+                <Avatars id={6} />
+            </React.Fragment>
             break;
         default:
             component = <p>No Component Found</p>;
