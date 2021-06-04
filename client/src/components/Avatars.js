@@ -24,16 +24,17 @@ export default function Avatars(props)
         case 2://Rikio
             avatars = <Avatar
                 avatarStyle='Circle'
-                topType='ShortHairTheCaesar'
+                topType='ShortHairShortCurly'
                 accessoriesType='Prescription02'
                 hairColor='BrownDark'
-                facialHairType='BeardMajestic'
+                facialHairType='BeardLight'
                 facialHairColor='BrownDark'
-                clotheType='BlazerShirt'
-                eyeType='Happy'
-                eyebrowType='RaisedExcited'
-                mouthType='Smile'
-                skinColor='Pale'
+                clotheType='ShirtVNeck'
+                clotheColor='White'
+                eyeType='Squint'
+                eyebrowType='DefaultNatural'
+                mouthType='Eating'
+                skinColor='Tanned'
             />
             break;
         case 3://Kay
