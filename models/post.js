@@ -1,3 +1,4 @@
+const { isInteger } = require("formik");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -9,7 +10,8 @@ const postSchema = new Schema({
   address: { type: String },
   description: { type: String },
   id: { type: String},
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
+  rating: {type: Number}
 });
 
 module.exports = Post = mongoose.model("posts", postSchema);
