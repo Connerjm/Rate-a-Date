@@ -11,7 +11,7 @@ export default function DateList(props)
             <h1>{props.header}</h1>
             <div>
                 {/* Create new date item for each date. */}
-                {props.posts.map(post =>
+                {props.dates.map(post =>
                     <DateListItem
                         title={post.title}
                         location={post.location}

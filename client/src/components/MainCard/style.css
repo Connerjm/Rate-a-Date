@@ -34,3 +34,103 @@ span {
 .section-header-spacing {
     padding: 20px 0px 20px 0px;
 }
+
+
+#mainCard {
+    width: 80%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+}
+#mainCard > div.container {
+    width: auto;
+    height: fit-content;
+}
+span {
+    color: var(--default-foreground);
+    font-size: var(--section-header);
+    font-style: small;
+    font-weight: var(--hero-weight);
+    line-height: 47px;
+    text-align: left;
+}
+.fas {
+    font-size: large;
+}
+.locBtn {
+    background-color: #9416FB;
+    color: white;
+}
+#mainCard > div.container > div > div > div.row {
+    justify-content: center;
+}
+
+#mainCard > div:nth-child(3) {
+    top: 750px;
+}
+.section-header-spacing {
+    padding: 20px 0px 20px 0px;
+}
+
+:root {
+    --default: #9416FB;
+    --light: #fff;
+    --danger: #E6016F;
+    --border-radius-md: 6px;
+    --border-radius-lg: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
+    --height-md: 30px;
+    --height-lg: 60px;
+    --text-medium: 500;
+}
+
+.medium {
+    height: var(--height-md);
+    width: fit-content;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    line-height: var(--height-md);
+    font-family: 'Roboto', sans-serif;
+}
+
+.large {
+    height: var(--height-lg);
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: var(--height-lg);
+    font-family: 'Roboto', sans-serif;
+}
+
+.filled-default {
+    color: var(--light);
+    background-color: var(--default);
+}
+
+.outline-default {
+    color: var(--default);
+    border: var(--default) solid 1px;
+}
+
+.filled-danger {
+    color: var(--light);
+    background-color: var(--danger);
+}
+
+.outline-danger {
+    color: var(--danger);
+    border: var(--danger) solid 1px;
+}
+
+.filled-default :hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
