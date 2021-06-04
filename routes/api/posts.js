@@ -17,7 +17,9 @@ router.post("/newdateidea", (req, res) => {
   .catch(err => console.log(err));
 })
 
-
+router
+  .route("/search/:searchTerm")
+  .get(postsController.find);
 
 router
   .route("/:id")
