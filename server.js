@@ -30,12 +30,6 @@ if (process.env.NODE_ENV === "production") {
 //Server logger set to dev for consice and colored responses.
 app.use(morgan("dev"));
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
 //Connect to the mongo database.
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/rateadate",
@@ -57,6 +51,11 @@ app.use("/api/users", users);
 app.use("/api/posts", posts);
 app.use("/api/comments", comments);
 
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 //Start the server.
 app.listen(PORT, function() {

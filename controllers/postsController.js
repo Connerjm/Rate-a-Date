@@ -2,6 +2,13 @@ const db = require("../models");
 
 // Defining methods for the postsController
 module.exports = {
+  //Find posts with the title that matches the given search term.
+  find: function(req, res) {
+    db.Post.find({title : req.params.searchTerm})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   findAll: function(req, res) {
     db.Post.find(req.query)
       .sort({ date: -1 })
