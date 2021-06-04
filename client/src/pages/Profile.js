@@ -16,10 +16,10 @@ class Profile extends Component {
   };
   handleClick = e => {
     e.preventDefault();
-    console.log(this.props.auth.user.username);
     sessionStorage.setItem("user", this.props.auth.user.username);
     window.location.replace("/newdateidea");
   }
+
 
     render() {
       const { user } = this.props.auth;

@@ -20,7 +20,7 @@ export default function DateListItem(props) {
             <h1 className="date-card-title">{props.title}</h1>
             <div className="button-group right">
               {/* Optional location. */}
-              <p className="tag tag-text">{props.location}</p>
+              <p className="tag tag-text">{props.address}</p>
               {/* Always exactly one category. */}
               <p className="tag tag-text">{props.category}</p>
               {/* 0 or more tags. */}
