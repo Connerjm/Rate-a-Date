@@ -7,6 +7,7 @@ import Date from "./Date";
 import DateListItem from "./DateListItem";
 import DateList from "./DateList";
 import MetaTags from "./MetaTags";
+import Avatars from "./Avatars";
 
 export default function TESTING(props)
 {
@@ -60,6 +61,9 @@ export default function TESTING(props)
                 type="tag"
                 content="Outdoors"
             />;
+            break;
+        case "Avatars":
+            component = <Avatars id={1} />;
             break;
         default:
             component = <p>No Component Found</p>;
