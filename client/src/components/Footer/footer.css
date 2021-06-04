@@ -1,12 +1,18 @@
 footer {
     left: 0;
     bottom: 0;
-    padding-left: 20%;
-    padding-right: 20%;
+    width: 50%;
     height: fit-content;
     padding-top: 40px;
     padding-bottom: 40px;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-bg {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -22,14 +28,10 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media only screen and (max-width: 800px) {
     .footer-container {
-        width: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 800px) {
   .heroImg {
-    height: auto;
+    height: 468px;
     padding-top: 12%;
     padding-bottom: 12%;
   }
@@ -22,7 +22,7 @@
 .layout {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 20px;
   width: 80%;
   margin-left: auto;
@@ -30,11 +30,18 @@
   padding-left: 60px;
 }
 
+@media only screen and (max-width: 800px) {
+  .layout {
+    height: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-self: center;
+  }
+}
+
 .para {
   text-align: center;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   font-size: 40px;
   font-weight: 700;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.623);
@@ -44,6 +51,7 @@
 @media only screen and (max-width: 600px) {
   .para {
     font-size: 28px;
+    text-overflow: ellipsis;
     padding: 0px 20px 0px 20px;
   }
 }
