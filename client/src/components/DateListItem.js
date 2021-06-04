@@ -1,5 +1,6 @@
 //Imports.
 import React from "react";
+import MetaTags from "./MetaTags";
 import Stars from "./Stars";
 
 //Component function.
