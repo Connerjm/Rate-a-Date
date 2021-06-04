@@ -42,6 +42,21 @@ export const loginUser = userData => dispatch => {
     );
 };
 
+//set new post
+export const newPost = (postData, history) => dispatch => {
+  axios
+    .post("/api/posts/newdateidea", postData)
+    .then(res => history.push("/Profile"))
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+
+
 // Set logged in user
 export const setCurrentUser = decoded => {
   return {

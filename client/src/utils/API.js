@@ -9,5 +9,10 @@ export default
     //Get single date by id.
     getDate: function(id) {
         return axios.get(`/api/dates/${id}`);
-    }
+    },
+    newPost: function(postData) {
+        return axios.create(`/api/posts/${postData}`);
+    },
+    
+   
 }
