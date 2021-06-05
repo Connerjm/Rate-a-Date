@@ -4,10 +4,9 @@ import SearchForm from "./searchForm";
 
 const Hero = props => {
     return (
-        <section className="heroImg">
+        <section className="heroImg fade-in one">
         <div className="layout">
-        <div className="heart"></div>
-            <p className="para">Date ideas to turn the spark into a flame</p>
+            <p className="para span">Date ideas to turn the spark into a flame</p>
             </div>
             <SearchForm />
         </section>

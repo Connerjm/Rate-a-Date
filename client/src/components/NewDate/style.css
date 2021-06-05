@@ -23,3 +23,11 @@
     border-radius: 12px;
     background: #F5F5F5;
 }
+
+.create-header-spacing {
+    padding: 40px 0px 20px 0px;
+}
+
+.icon-spacer {
+    padding-right: 12px;
+}

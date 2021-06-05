@@ -25,7 +25,7 @@ class SearchForm extends Component {
 
     render() {
         return(
-            <form noValidate onSubmit={this.onSubmit} className="searchForm flex">
+            <form noValidate onSubmit={this.onSubmit} className="searchForm flex fade-in five">
                 <input className="search"
                     value={this.state.search}
                     placeholder="Search for ideas"
