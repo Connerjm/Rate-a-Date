@@ -242,7 +242,7 @@ onSubmit = e => {
             <div className="catOccCards p-5 fade-in five" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
-                  style={{ backgroundImage: `url(images/occasions/thankyou.png)` }}
+                  style={{ backgroundImage: `url(images/occasions/thankYou.png)` }}
                   value="Thank You" onClick={this.onSubmit}>
                   <div className="card-body">
                     <h5 className="card-title">Thank You</h5>
