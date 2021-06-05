@@ -29,10 +29,10 @@ class Profile extends Component {
             <div>
             <div className="profile-card-header">
             <div className="flex-row">
-                <Avatars className="avatar-lrg" component="Rikio" />
+                <Avatars className="avatar-lrg fade-in one" component="Rikio" />
                 <h1 className="hero-header align-center">{user.username}</h1>
             </div>
-                <div className="button-group">
+                <div className="button-group fade-in one">
                 <a onClick={this.handleClick} className="large filled-default">Add a new Date</a> 
                 <a className="large outline-danger" onClick={this.onLogoutClick}>logout</a>
                 </div>

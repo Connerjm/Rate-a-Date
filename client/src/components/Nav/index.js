@@ -31,8 +31,11 @@ class NavBar extends Component {
                 <div></div>
                 :
                 <div><a href="/" id="home" className="btn round" style={{ padding: "0px" }}><i className="fas fa-home" style={{ fontSize: "32px" }}></i></a></div>}
-                
+
+                <div>
+                <div className="bulb"></div>
                 <img className="logo" src="https://raw.githubusercontent.com/FAC-73/zen-garden/c97a876ba046f32aab6e563ee158e349f3336006/spark_logo.svg" alt="logo" />
+                </div>
                 
                 {!this.props.auth.user.username
                 ?

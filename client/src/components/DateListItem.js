@@ -3,10 +3,15 @@ import React from "react";
 import MetaTags from "./MetaTags";
 import Stars from "./Stars";
 
+function handleClick()
+{
+  window.location.replace("/details");
+}
+
 //Component function.
 export default function DateListItem(props) {
   return (
-    <div className="date-card">
+    <div className="date-card fade-in three">
       <div className="date-card-content">
         {/* <img className="date-img" href={props.image} alt="A depiction of the specified date"/> */}
         <img
@@ -20,9 +25,9 @@ export default function DateListItem(props) {
             <h1 className="date-card-title">{props.title}</h1>
             <div className="button-group right">
               {/* Optional location. */}
-              <p className="tag tag-text">{props.address}</p>
+              <MetaTags type="location" content={props.address}/>
               {/* Always exactly one category. */}
-              <p className="tag tag-text">{props.category}</p>
+              <MetaTags type="category" content={props.category} />
               {/* 0 or more tags. */}
               {/*{props.tags ? <ul>
                         {props.tags.map(tag =>
@@ -35,7 +40,7 @@ export default function DateListItem(props) {
           {/* Bottom part with buttons and rating. */}
           <div className="card-footer-container">
             <div className="button-group">
-              <button className="medium filled-default">View details</button>
+              <button className="medium filled-default" onClick={handleClick}>View details</button>
               <button className="medium outline-danger">Delete</button>
             </div>
             <Stars currentRating={props.currentRating} />

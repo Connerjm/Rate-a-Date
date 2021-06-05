@@ -64,7 +64,9 @@ class NewDate extends Component {
         const { user } = this.props.auth;
         return (
             <div className="form-container">
-                <h1 className="section-header-spacing">Add Date Idea</h1>
+                <h1 className="create-header-spacing icon-spacer">
+                <i class="far fa-lightbulb icon-spacer"></i>
+                  Add Date Idea</h1>
                 <form noValidate onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label htmlFor="title" id="title">Date name* (i.e. Fun with Victor)</label>
