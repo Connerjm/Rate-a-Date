@@ -20,9 +20,9 @@ export default function DateListItem(props) {
             <h1 className="date-card-title">{props.title}</h1>
             <div className="button-group right">
               {/* Optional location. */}
-              <p className="tag tag-text">{props.address}</p>
+              <MetaTags type="location" content={props.address}/>
               {/* Always exactly one category. */}
-              <p className="tag tag-text">{props.category}</p>
+              <MetaTags type="category" content={props.category} />
               {/* 0 or more tags. */}
               {/*{props.tags ? <ul>
                         {props.tags.map(tag =>
