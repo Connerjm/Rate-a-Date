@@ -3,11 +3,11 @@ import Avatar from "avataaars";
 
 export default function Avatars(props)
 {
-    let avatars;
-    switch (props.id)
+    let component;
+    switch (props.component)
     {
-        case 1://Conner
-            avatars = <Avatar
+        case "Conner"://Conner
+            component = <Avatar
                 avatarStyle='Circle'
                 topType='ShortHairTheCaesar'
                 accessoriesType='Prescription02'
@@ -21,8 +21,8 @@ export default function Avatars(props)
                 skinColor='Pale'
             />;
             break;
-        case 2://Rikio
-            avatars = <Avatar
+        case "Rikio"://Rikio
+            component = <Avatar
                 avatarStyle='Circle'
                 topType='ShortHairShortCurly'
                 accessoriesType='Prescription02'
@@ -37,8 +37,8 @@ export default function Avatars(props)
                 skinColor='Tanned'
             />
             break;
-        case 3://Kay
-            avatars = <Avatar
+        case "Kay"://Kay
+            component = <Avatar
                 avatarStyle='Circle'
                 topType='LongHairStraight2'
                 accessoriesType='Round'
@@ -53,8 +53,8 @@ export default function Avatars(props)
                 skinColor='Pale'
             />
             break;
-        case 4://Corban
-            avatars = <Avatar
+        case "Corban"://Corban
+            component = <Avatar
                 avatarStyle='Circle'
                 topType='ShortHairShortRound'
                 accessoriesType='Blank'
@@ -68,9 +68,9 @@ export default function Avatars(props)
                 mouthType='Default'
                 skinColor='Pale'
             />;
-            break
-        case 5://Danielle
-            avatars = <Avatar
+            break;
+        case "Danielle"://Danielle
+            component = <Avatar
                 avatarStyle='Circle'
                 topType='LongHairStraightStrand'
                 accessoriesType='Blank'
@@ -84,8 +84,8 @@ export default function Avatars(props)
                 skinColor='Pale'
             />;
             break;
-        case 6://Megan
-            avatars = <Avatar
+        case "Megan"://Megan
+           component = <Avatar
                 avatarStyle='Circle'
                 topType='LongHairCurvy'
                 accessoriesType='Blank'
@@ -100,8 +100,8 @@ export default function Avatars(props)
             />;
             break;
         default:
-            avatars = <p>Something went wrong!</p>
+            component = <p>Something went wrong!</p>
             break;
     }
-    return avatars;
+    return component;
 }
