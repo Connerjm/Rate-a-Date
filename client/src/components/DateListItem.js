@@ -3,6 +3,11 @@ import React from "react";
 import MetaTags from "./MetaTags";
 import Stars from "./Stars";
 
+function handleClick()
+{
+  window.location.replace("/details");
+}
+
 //Component function.
 export default function DateListItem(props) {
   return (
@@ -35,7 +40,7 @@ export default function DateListItem(props) {
           {/* Bottom part with buttons and rating. */}
           <div className="card-footer-container">
             <div className="button-group">
-              <button className="medium filled-default">View details</button>
+              <button className="medium filled-default" onClick={handleClick}>View details</button>
               <button className="medium outline-danger">Delete</button>
             </div>
             <Stars currentRating={props.currentRating} />

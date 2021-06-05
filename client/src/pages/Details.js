@@ -7,7 +7,13 @@ class Detail extends Component {
         return (
               <section className="container">
                 <div className="article">
-                    <Date />
+                    <Date
+                        title="Seattle Waterfront"
+                        currentRating={4}
+                        username="sparkiboi"
+                        description="Lots to see on the waterfront."
+                        address="Seattle"
+                    />
                 </div>
               </section>
         );
