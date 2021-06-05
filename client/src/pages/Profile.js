@@ -3,6 +3,7 @@ import TESTING from "../components/TESTING";
 import { logoutUser } from "../actions/authActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Avatars from "../components/Avatars";
 
 class Profile extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Profile extends Component {
             <div>
             <div className="profile-card-header">
             <div className="flex-row">
-                <img className="avatar-lrg" src="/images/randoUser.png" alt="Thumbnail of the assosiated user."/>
+                <Avatars className="avatar-lrg" component="Rikio" />
                 <h1 className="hero-header align-center">{user.username}</h1>
             </div>
                 <div className="button-group">
