@@ -8,7 +8,9 @@ export default function Date(props) {
     return (
         <div>
             {/* <img className="details-img" src={props.image} alt="Representation of the current date."/> */}
-            <img className="details-img" src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4219&q=80" alt="Representation of the current date." />
+            <img className="details-img" src={props.photo}
+            //"https://images.unsplash.com/photo-1502175353174-a7a70e73b362?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4219&q=80" alt="Representation of the current date." 
+            />
             <div>
                 <div className="details-section-header-spacing">
                 <div>
