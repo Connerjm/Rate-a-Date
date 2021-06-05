@@ -6,7 +6,7 @@ import Stars from "./Stars";
 //Component function.
 export default function DateListItem(props) {
   return (
-    <div className="date-card">
+    <div className="date-card fade-in three">
       <div className="date-card-content">
         {/* <img className="date-img" href={props.image} alt="A depiction of the specified date"/> */}
         <img

@@ -39,7 +39,8 @@
 
 
 .logo {
-    padding-left: 12%;
+    /* padding-left: 12%; */
+    z-index: 0;
 }
 
 header {
@@ -47,30 +48,34 @@ header {
     top: 0;
     padding-top: 38px;
     padding-bottom: 38px;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: transparent;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     text-align: right;
 }
 
+/* ------------------------------------------------------------------ */
+/* Glow animation
+/* ------------------------------------------------------------------ */
 
-@media only screen and (max-width: 600px) {
-    header {
-        min-width: 320px;
-        width: auto;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+.bulb {
+    animation: glow 1s infinite alternate;
+    height: 32px;
+    width: 31px;
+    border-radius: 16px;
+    z-index: 2;
+    position: Absolute;
+    background-color: transparent;
+    margin-left: 147px;
 }
 
-@media only screen and (max-width: 600px) {
-    logo {
-        padding-left: 4%;
-    }
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -8px #ffffffa4;
+  }
+  to {
+    box-shadow: 0 0 10px 16px #fdd38586;
+  }
 }
-

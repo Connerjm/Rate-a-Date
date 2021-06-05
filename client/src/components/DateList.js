@@ -9,7 +9,7 @@ export default function DateList(props)
     return (
         <React.Fragment>
             {/* Header for the given list. */}
-            <h1>{props.header}</h1>
+            <h1 className="details-section-spacing">{props.header}</h1>
             <div>
                 {/* Create new date item for each date. */}
                 {props.posts ? (props.posts.map(post =>

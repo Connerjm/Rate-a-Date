@@ -133,6 +133,12 @@ a:hover {
     padding: 0px 32px 0px 32px;
 }
 
+@media only screen and (max-width: 560px) {
+    .col-12 {
+        padding: 0px 12px 0px 12px;
+    }
+}
+
 .p-1 {
     padding: 2px!important;
 }
@@ -151,6 +157,12 @@ a:hover {
 
 .p-5 {
     padding: 10px!important;
+}
+
+@media only screen and (max-width: 560px) {
+    .p-5 {
+        padding: 4px!important;
+    }
 }
 /* ------------------------------------------------------------------ */
 /* Text styles
@@ -237,7 +249,7 @@ header {
 
 .card {
     height: 160px;
-    width: 240px;
+    width: 248px;
     background-image: url(https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
     background-size: cover;
     background-repeat: none;
@@ -254,10 +266,10 @@ header {
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 560px) {
     .card {
         height: 160px;
-        width: 240px;
+        width: 294px;
         /* background-size: 100% auto; */
     }
 }
@@ -610,7 +622,7 @@ header {
 	position: relative;
 	width: 32px;
 	height: 32px;
-	background-color: #E6016F;
+	background-color: #fff;
 	transform: rotate(45deg);
 	animation: heartbeat 1.4s linear infinite;
 }
@@ -622,7 +634,7 @@ header {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #E6016F;
+	background-color: #fff;
 	transform: translateY(-50%);
 	border-radius: 50%;
     
@@ -635,7 +647,7 @@ header {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #E6016F;
+	background-color: #fff;
 	transform: translateX(-50%);
 	border-radius: 50%;
 }
@@ -647,6 +659,15 @@ header {
 	50% { transform: rotate(45deg) scale(1.2); }
 	70% { transform: rotate(45deg) scale(1.4); }
 	100% { transform: rotate(45deg) scale(1); }
+}
+
+@media only screen and (max-width: 800px) {
+    .heart {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 /* ------------------------------------------------------------------ */
@@ -677,7 +698,7 @@ header {
     border: 1px solid #E0E0E0;
     height: 172px;
     width: 100%;
-    min-width: 320px;
+    min-width: 240px;
     border-radius: var(--border-radius-lg);
     margin-top: 10px;
     margin-bottom: 10px;
@@ -836,6 +857,13 @@ header {
     padding-top: 50px;
 }
 
+@media only screen and (max-width: 560px) {
+    .align-center {
+        padding-top: 0px;
+    }
+}
+
+
 .list-group-item {
     position: relative;
     display: block;
@@ -907,3 +935,74 @@ header {
     gap: 12px;
 }
 
+/* ------------------------------------------------------------------ */
+/* Fade in animations
+/* ------------------------------------------------------------------ */
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:0.3s;
+	-moz-animation-duration:0.3s;
+	animation-duration:0.3s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+animation-delay: 1s;
+}
+
+.fade-in.four {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+.fade-in.five {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+    animation-delay: 1.8s;
+}
+
+.fade-in.six {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.fade-in.seven {
+    -webkit-animation-delay: 2.3s;
+    -moz-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+
+.fade-in.eight {
+    -webkit-animation-delay: 2.6s;
+    -moz-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}

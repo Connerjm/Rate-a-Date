@@ -35,52 +35,52 @@ onSubmit = e => {
               </i>
             </div>
             <div className="row">
-              <div className="locationTags p-2" onChange={this.onChange} >
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange} >
                 <button className="large filled-default cstBtn" className="large filled-default cstBtn" value="Seattle" onClick={this.onSubmit}>
                   Seattle
               </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Los Angeles" onClick={this.onSubmit}>
                   Los Angeles
                 </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Austin" onClick={this.onSubmit}>
                   Austin
                 </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Portland" onClick={this.onSubmit}>
                   Portland
                 </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Chicago" onClick={this.onSubmit}>
                   Chicago
               </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Austin" onClick={this.onSubmit}>
                   Austin
             </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Miami" onClick={this.onSubmit}>
                   Miami
             </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="New York" onClick={this.onSubmit}>
                   New York
             </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="Philadelphia" onClick={this.onSubmit}>
                   Philadelphia
             </button>
               </div>
-              <div className="locationTags p-2" onChange={this.onChange}>
+              <div className="locationTags p-2 fade-in two" onChange={this.onChange}>
                 <button className="large filled-default cstBtn" value="N/A" onClick={this.onSubmit}>
                   No Location
               </button>
@@ -92,12 +92,12 @@ onSubmit = e => {
       <div className="row">
         <div className="col-12">
           <div className="section-header-spacing">
-            <i className="fas fa-map-marker-alt">
+          <i class="fas fa-clipboard-list">
               <span className="pl-3">Dates by Category</span>
             </i>
           </div>
           <div className="row">
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in one" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/adventure.png)` }}
@@ -108,7 +108,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in two" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/gaming.png)` }}
@@ -119,7 +119,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in three" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/sports.png)` }}
@@ -130,7 +130,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in four" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/arts.png)` }}
@@ -141,7 +141,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in one" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/entertainment.png)` }}
@@ -152,7 +152,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in two" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/Romance.png)` }}
@@ -163,7 +163,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in three" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/food.png)` }}
@@ -174,7 +174,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in four" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/pets.png)` }}
@@ -188,14 +188,14 @@ onSubmit = e => {
           </div>
         </div>
 
-          <div className="col">
+          <div className="col-12">
             <div className="section-header-spacing">
-              <i className="fas fa-map-marker-alt">
+            <i class="fas fa-birthday-cake">
                 <span className="pl-3">Dates by Occasion</span>
               </i>
             </div>
           <div className="row">
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in five" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/birthday.png)` }}
@@ -206,7 +206,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in six" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/holidays.png)` }}
@@ -217,7 +217,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in seven" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/valentines.png)` }}
@@ -228,7 +228,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in eight" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/anniversary.png)` }}
@@ -239,7 +239,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in five" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/thankyou.png)` }}
@@ -250,7 +250,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in six" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/halloween.png)` }}
@@ -261,7 +261,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in seven" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/congrats.png)` }}
@@ -272,7 +272,7 @@ onSubmit = e => {
                 </button>
               </div>
             </div>
-            <div className="catOccCards p-5" >
+            <div className="catOccCards p-5 fade-in eight" >
               <div onChange={this.onChange}>
                 <button className="card card-text"
                   style={{ backgroundImage: `url(images/occasions/newYear.png)` }}
