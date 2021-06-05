@@ -20,6 +20,7 @@ export default function DateList(props)
                         tags={post.tags}
                         description={post.description}
                         rating={post.rating}
+                        photo={post.photo}
                     />)) : (<div></div>)}
             </div>
         </React.Fragment>

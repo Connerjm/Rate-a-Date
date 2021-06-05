@@ -10,7 +10,8 @@ const postSchema = new Schema({
   description: { type: String },
   id: { type: String},
   date: { type: Date, default: Date.now },
-  rating: {type: Number}
+  rating: {type: Number},
+  photo: { type: String }
 });
 
 module.exports = Post = mongoose.model("posts", postSchema);

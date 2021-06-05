@@ -16,7 +16,8 @@ export default function DateListItem(props) {
         {/* <img className="date-img" href={props.image} alt="A depiction of the specified date"/> */}
         <img
           className="date-img"
-          src="https://images.unsplash.com/photo-1549092273-8b23dde8ac2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80"
+          src={props.photo}
+          //src="https://images.unsplash.com/photo-1549092273-8b23dde8ac2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80"
           alt="A depiction of the specified date"
         />
         {/* Top part with title and meta info. */}

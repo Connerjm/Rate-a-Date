@@ -9,7 +9,8 @@ router.post("/newdateidea", (req, res) => {
     category: req.body.category,
     occasion: req.body.occasion,
     address: req.body.address,
-    description: req.body.description
+    description: req.body.description,
+    photo: req.body.photo
   })
   newPost
   .save()

@@ -24,7 +24,8 @@ class NewDate extends Component {
             description: "",
             address: "",
             username: "",
-            id: ""
+            id: "",
+            photo: ""
 
         };
     }
@@ -53,7 +54,8 @@ class NewDate extends Component {
             address: this.state.address,
             description: this.state.description,
             username: this.state.username,
-            id: this.state.title
+            id: this.state.title,
+            photo: this.state.photo
         }
         console.log(postData)
         this.props.newPost(postData, this.props.history);
@@ -140,6 +142,16 @@ class NewDate extends Component {
                                 }
                             />
                         </div>*/}
+                    </div>
+                    <div className="form-group">
+                    <label htmlFor="photo" id="photo">Photo</label>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.photo}
+                            id="photo"
+                            type="text"
+                            className="form-control"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="picture" id="picture">Add Photo</label>
