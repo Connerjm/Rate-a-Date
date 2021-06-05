@@ -15,7 +15,7 @@ export default function DateList(props)
                 {props.posts ? (props.posts.map(post =>
                     <DateListItem
                         title={post.title}
-                        location={post.location}
+                        address={post.address}
                         category={post.category}
                         tags={post.tags}
                         description={post.description}
