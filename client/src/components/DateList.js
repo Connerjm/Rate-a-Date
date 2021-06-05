@@ -12,7 +12,7 @@ export default function DateList(props)
             <h1 className="details-section-spacing">{props.header}</h1>
             <div>
                 {/* Create new date item for each date. */}
-                {props.dates.map(post =>
+                {props.posts ? (props.posts.map(post =>
                     <DateListItem
                         title={post.title}
                         location={post.location}
@@ -20,7 +20,7 @@ export default function DateList(props)
                         tags={post.tags}
                         description={post.description}
                         rating={post.rating}
-                    />)}
+                    />)) : (<div></div>)}
             </div>
         </React.Fragment>
     );

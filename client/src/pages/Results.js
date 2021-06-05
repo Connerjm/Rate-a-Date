@@ -4,8 +4,7 @@ import API from "../utils/API";
 
 class Detail extends Component {
     state = {
-        posts: [],
-        userPosts: []
+        posts: []
     }
 
     componentDidMount() {
@@ -13,11 +12,10 @@ class Detail extends Component {
     }
 
     getResults() {
-        this.setState({ posts: API.getPosts(sessionStorage.getItem("search-term"))});
-        API.getPost(this.state) 
+        API.getPosts(sessionStorage.getItem("search-term")) 
         .then(res => {
             this.setState({
-                userPosts: res.data
+                posts: res.data
             })
             console.log("This is the res from posts", res);
         })
@@ -30,14 +28,7 @@ class Detail extends Component {
         return (
           <section className="container">
               <article className="searchResults">
-                  <DateList header="Search Results" posts={this.state.posts}/>
-                 {/*{this.state.posts.length ? (
-                     <DateList />
-                 ) : (
-                     <div>
-                         <p>No results to display</p>
-                     </div>
-                 )}*/}
+                 {this.state.posts.length ? ( <DateList header="Search Results" posts={this.state.posts} /> ) : ( <p>No results to display</p> )}
               </article>
           </section>
         );
